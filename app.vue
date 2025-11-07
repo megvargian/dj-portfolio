@@ -4,7 +4,9 @@
     <nav class="navbar">
       <div class="container">
         <div class="nav-content">
-          <div class="nav-logo">RONN</div>
+          <div class="nav-logo">
+            <img src="./public/logo.jpg" alt="DJ RONN" class="nav-logo-image">
+          </div>
           <div class="nav-links">
             <a href="#about">ABOUT</a>
             <a href="#gallery">GALLERY</a>
@@ -90,7 +92,9 @@
       </div>
       <div class="hero-content">
         <div class="logo-container">
-          <h1 class="logo">RONN</h1>
+          <div class="logo-image-wrapper">
+            <img src="./public/logo.jpg" alt="DJ RONN Logo" class="hero-logo-image">
+          </div>
           <p class="tagline">ARCHITECT OF SOUND</p>
           <p class="hero-description">Where precision meets passion, creating unforgettable sonic experiences</p>
           <div class="hero-buttons">
@@ -111,7 +115,7 @@
         <div class="about-grid">
           <div class="about-image">
             <div class="image-wrapper">
-              <img src="/IMG-20251106-WA0050.jpg" alt="DJ RONN" onerror="this.src='https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&h=1000&fit=crop'">
+              <img src="/ronn.jpg" alt="DJ RONN">
               <div class="image-overlay"></div>
             </div>
           </div>
@@ -146,27 +150,39 @@
         <h2 class="section-title">IN ACTION</h2>
         <div class="gallery-grid">
           <div class="gallery-item large">
-            <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800&h=1000&fit=crop" alt="RONN Performance">
+            <img src="/dj.jpg" alt="RONN Performance">
             <div class="gallery-overlay">
               <span class="gallery-label">LIVE PERFORMANCE</span>
             </div>
           </div>
           <div class="gallery-item">
-            <img src="/IMG-20251106-WA0050.jpg" alt="Sound Equipment" onerror="this.src='https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=600&h=600&fit=crop'">
+            <img src="/IMG-20251106-WA0050.jpg" alt="Sound Equipment">
             <div class="gallery-overlay">
               <span class="gallery-label">STUDIO SETUP</span>
             </div>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=600&h=600&fit=crop" alt="DJ Setup">
+            <img src="/IMG-20251106-WA0051.jpg" alt="DJ Setup">
             <div class="gallery-overlay">
               <span class="gallery-label">CLUB NIGHT</span>
             </div>
           </div>
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=600&fit=crop" alt="Studio">
+            <img src="/IMG-20251106-WA0052.jpg" alt="Studio">
             <div class="gallery-overlay">
               <span class="gallery-label">PRODUCTION</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/WhatsApp Image 2025-11-06 at 22.16.47_0c139c20.jpg" alt="Event Setup">
+            <div class="gallery-overlay">
+              <span class="gallery-label">EVENT SETUP</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/WhatsApp Image 2025-11-06 at 22.16.47_1d2c8334.jpg" alt="Performance">
+            <div class="gallery-overlay">
+              <span class="gallery-label">PERFORMANCE</span>
             </div>
           </div>
         </div>
@@ -499,13 +515,19 @@ const handleSubmit = async () => {
 }
 
 .nav-logo {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: 0.3rem;
-  background: linear-gradient(135deg, #00ffff, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.nav-logo-image:hover {
+  opacity: 0.8;
 }
 
 .nav-links {
@@ -936,15 +958,24 @@ const handleSubmit = async () => {
   margin-bottom: 4rem;
 }
 
+.logo-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hero-logo-image {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
 .logo {
   font-size: clamp(4rem, 10vw, 9rem);
   font-weight: 900;
   letter-spacing: clamp(0.5rem, 2vw, 1.5rem);
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #fff 0%, #00ffff 50%, #ff00ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
   animation: logoGlow 4s ease-in-out infinite;
   position: relative;
 }
@@ -954,10 +985,7 @@ const handleSubmit = async () => {
   position: absolute;
   left: 0;
   top: 0;
-  background: linear-gradient(135deg, #00ffff 0%, #ff00ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
   z-index: -1;
   filter: blur(30px);
   opacity: 0.5;
@@ -971,17 +999,18 @@ const handleSubmit = async () => {
 .tagline {
   font-size: clamp(1rem, 2.5vw, 1.75rem);
   letter-spacing: clamp(0.3rem, 1vw, 0.7rem);
-  color: #999;
-  font-weight: 400;
+  color: #fff;
+  font-weight: 900;
   margin-bottom: 1.5rem;
 }
 
 .hero-description {
   font-size: clamp(1rem, 1.5vw, 1.1rem);
-  color: #666;
+  color: #fff;
   line-height: 1.8;
   max-width: 600px;
   margin: 0 auto 3rem;
+  font-weight: 500;
 }
 
 .hero-buttons {
@@ -1660,6 +1689,17 @@ const handleSubmit = async () => {
 
   .hero {
     padding-top: 60px;
+    align-items: flex-start;
+    padding-top: 120px;
+  }
+
+  .hero-content {
+    margin-top: 0;
+  }
+
+  .hero-logo-image {
+    width: 150px;
+    height: auto;
   }
 
   .logo {
