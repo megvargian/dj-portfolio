@@ -1802,28 +1802,36 @@ const handleSubmit = async () => {
   }
 
   .cover-hero {
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/10;
   }
 
   .cover-overlay {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .cover-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .cover-bottom {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .cover-bottom-image {
+    aspect-ratio: 1/1;
   }
 
   .cover-bottom-text {
-    padding: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
   }
 
   .cover-bottom-text h2 {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
   }
 
   .hero {
