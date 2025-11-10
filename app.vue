@@ -93,77 +93,43 @@
               <h1 class="cover-title">Home of global<br>talented artists</h1>
             </div>
           </div>
-          <div class="cover-bottom">
-            <div class="cover-bottom-image">
-              <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
-            </div>
-            <div class="cover-bottom-text">
-              <h2>Welcome to RONN,<br>the pulsating heart<br>of musical innovation.</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-background">
-        <div class="grid-overlay"></div>
-        <div class="light-beam light-beam-1"></div>
-        <div class="light-beam light-beam-2"></div>
-      </div>
-      <div class="hero-content">
-        <div class="logo-container">
-          <div class="logo-image-wrapper">
-            <img src="/logo.jpg" alt="DJ RONN Logo" class="hero-logo-image">
-          </div>
-          <p class="tagline">ARCHITECT OF SOUND</p>
-          <p class="hero-description">Where precision meets passion, creating unforgettable sonic experiences</p>
-          <div class="hero-buttons">
-            <a href="#booking" class="btn btn-primary">BOOK NOW</a>
-            <a href="#about" class="btn btn-secondary">LEARN MORE</a>
-          </div>
-        </div>
-        <div class="scroll-indicator">
-          <span>SCROLL</span>
-          <div class="line"></div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-image">
-            <div class="image-wrapper">
-              <img src="/ronn.jpg" alt="DJ RONN">
-              <div class="image-overlay"></div>
+            <div class="container">
+              <div class="about-grid">
+                <div class="about-image">
+                  <div class="image-wrapper">
+                    <img src="/ronn.jpg" alt="DJ RONN">
+                    <div class="image-overlay"></div>
+                  </div>
+                </div>
+                <div class="about-content">
+                  <span class="label">ABOUT</span>
+                  <h2>DESIGNING SOUND IS DESIGNING EMOTION</h2>
+                  <p>With a background in architecture and a passion for sonic design, Ronn creates soundscapes that fuse structure, emotion, and energy. Each set is crafted like a blueprint — layered, balanced, and built to move both mind and body.</p>
+                  <p>Ronn has performed in some of the world's most design-forward venues across Paris, Dubai, Beirut, and Cyprus, delivering performances that merge aesthetic precision with magnetic rhythm. His music celebrates retro-modern fusion, combining elements of 80s synthwave, deep electronic grooves, and architectural sound design that elevates every space.</p>
+                  <div class="stats">
+                    <div class="stat">
+                      <span class="stat-number">500+</span>
+                      <span class="stat-label">Events</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">10+</span>
+                      <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat">
+                      <span class="stat-number">50K+</span>
+                      <span class="stat-label">Happy Guests</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="about-content">
-            <span class="label">ABOUT</span>
-            <h2>DESIGNING SOUND IS DESIGNING EMOTION</h2>
-            <p>With a background in architecture and a passion for sonic design, Ronn creates soundscapes that fuse structure, emotion, and energy. Each set is crafted like a blueprint — layered, balanced, and built to move both mind and body.</p>
-            <p>Ronn has performed in some of the world's most design-forward venues across Paris, Dubai, Beirut, and Cyprus, delivering performances that merge aesthetic precision with magnetic rhythm. His music celebrates retro-modern fusion, combining elements of 80s synthwave, deep electronic grooves, and architectural sound design that elevates every space.</p>
-            <div class="stats">
-              <div class="stat">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Events</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">10+</span>
-                <span class="stat-label">Years</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">Happy Guests</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          </section>
 
     <!-- Gallery Section -->
     <section class="gallery" id="gallery">
@@ -211,6 +177,22 @@
       </div>
     </section>
 
+    <!-- Welcome Section -->
+    <section class="cover-section">
+      <div class="container">
+        <div class="cover-content">
+          <div class="cover-bottom">
+            <div class="cover-bottom-image">
+              <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
+            </div>
+            <div class="cover-bottom-text">
+              <h2>Welcome to RONN,<br>the pulsating heart<br>of musical innovation.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services" id="services">
       <div class="container">
@@ -250,17 +232,6 @@
             </div>
             <h3>Music Production</h3>
             <p>Custom tracks, remixes, and sound design crafted with precision and artistic excellence</p>
-          </div>
-          <div class="service-card">
-            <div class="service-number">04</div>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77V2Z" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Festivals</h3>
-            <p>Large-scale performances that captivate thousands with immersive sonic experiences</p>
           </div>
         </div>
       </div>
@@ -393,6 +364,32 @@
         </div>
       </div>
     </section>
+        <!-- Hero Section -->
+    <!-- <section class="hero">
+      <div class="hero-background">
+        <div class="grid-overlay"></div>
+        <div class="light-beam light-beam-1"></div>
+        <div class="light-beam light-beam-2"></div>
+      </div>
+      <div class="hero-content">
+        <div class="logo-container">
+          <div class="logo-image-wrapper">
+            <img src="/logo.jpg" alt="DJ RONN Logo" class="hero-logo-image">
+          </div>
+          <p class="tagline">ARCHITECT OF SOUND</p>
+          <p class="hero-description">Where precision meets passion, creating unforgettable sonic experiences</p>
+          <div class="hero-buttons">
+            <a href="#booking" class="btn btn-primary">BOOK NOW</a>
+            <a href="#about" class="btn btn-secondary">LEARN MORE</a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span>SCROLL</span>
+          <div class="line"></div>
+        </div>
+      </div>
+    </section> -->
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -1394,8 +1391,10 @@ const handleSubmit = async () => {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
