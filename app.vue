@@ -122,8 +122,8 @@
           <div class="about-content">
             <span class="label">ABOUT</span>
             <h2>DESIGNING SOUND IS DESIGNING EMOTION</h2>
-            <p>Experience the perfect blend of technical precision and artistic expression. RONN brings a unique architectural approach to sound design, crafting unforgettable musical journeys that resonate with every beat.</p>
-            <p>From intimate venues to massive festivals, each performance is meticulously designed to create an immersive sonic landscape that transcends the ordinary.</p>
+            <p>With a background in architecture and a passion for sonic design, Ronn creates soundscapes that fuse structure, emotion, and energy. Each set is crafted like a blueprint — layered, balanced, and built to move both mind and body.</p>
+            <p>Ronn has performed in some of the world's most design-forward venues across Paris, Dubai, Beirut, and Cyprus, delivering performances that merge aesthetic precision with magnetic rhythm. His music celebrates retro-modern fusion, combining elements of 80s synthwave, deep electronic grooves, and architectural sound design that elevates every space.</p>
             <div class="stats">
               <div class="stat">
                 <span class="stat-number">500+</span>
@@ -377,7 +377,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <h3>RONN</h3>
+            <img src="/logo.jpg" alt="DJ RONN" class="footer-logo-image">
             <p>Architect of Sound</p>
           </div>
           <div class="footer-social">
@@ -1590,15 +1590,17 @@ const handleSubmit = async () => {
   margin-bottom: 3.5rem;
 }
 
-.footer-logo h3 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 0.6rem;
-  margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, #00ffff, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-logo-image {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
 }
 
 .footer-logo p {
@@ -1783,8 +1785,12 @@ const handleSubmit = async () => {
     justify-content: center;
   }
 
-  .footer-logo h3 {
-    font-size: 2rem;
+  .footer-logo {
+    align-items: center;
+  }
+
+  .footer-logo-image {
+    width: 100px;
   }
 }
 
