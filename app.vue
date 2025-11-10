@@ -83,6 +83,28 @@
       </div>
     </Transition>
 
+    <!-- Cover Section -->
+    <section class="cover-section">
+      <div class="container">
+        <div class="cover-content">
+          <div class="cover-hero">
+            <img src="/ronn.jpg" alt="DJ RONN Cover" class="cover-image">
+            <div class="cover-overlay">
+              <h1 class="cover-title">Home of global<br>talented artists</h1>
+            </div>
+          </div>
+          <div class="cover-bottom">
+            <div class="cover-bottom-image">
+              <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
+            </div>
+            <div class="cover-bottom-text">
+              <h2>Welcome to RONN,<br>the pulsating heart<br>of musical innovation.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-background">
@@ -93,7 +115,7 @@
       <div class="hero-content">
         <div class="logo-container">
           <div class="logo-image-wrapper">
-            <img src="./public/logo.jpg" alt="DJ RONN Logo" class="hero-logo-image">
+            <img src="/logo.jpg" alt="DJ RONN Logo" class="hero-logo-image">
           </div>
           <p class="tagline">ARCHITECT OF SOUND</p>
           <p class="hero-description">Where precision meets passion, creating unforgettable sonic experiences</p>
@@ -861,6 +883,88 @@ const handleSubmit = async () => {
 .label.center {
   display: block;
   text-align: center;
+}
+
+/* Cover Section */
+.cover-section {
+  padding: clamp(8rem, 12vw, 12rem) 0 clamp(4rem, 8vw, 8rem);
+  background: #000;
+  position: relative;
+}
+
+.cover-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cover-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+}
+
+.cover-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.cover-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.cover-bottom-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bottom-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-bottom-text {
+  padding: 2rem;
+}
+
+.cover-bottom-text h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
 /* Hero Section */
@@ -1687,6 +1791,39 @@ const handleSubmit = async () => {
 @media (max-width: 768px) {
   .container {
     padding: 0 1.5rem;
+  }
+
+  .cover-section {
+    padding: 6rem 0 3rem;
+  }
+
+  .cover-content {
+    gap: 2rem;
+  }
+
+  .cover-hero {
+    aspect-ratio: 4/3;
+  }
+
+  .cover-overlay {
+    padding: 2rem;
+  }
+
+  .cover-title {
+    font-size: 2rem;
+  }
+
+  .cover-bottom {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cover-bottom-text {
+    padding: 0;
+  }
+
+  .cover-bottom-text h2 {
+    font-size: 1.5rem;
   }
 
   .hero {
