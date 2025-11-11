@@ -114,15 +114,15 @@
                   <p>Ronn has performed in some of the world's most design-forward venues across Paris, Dubai, Beirut, and Cyprus, delivering performances that merge aesthetic precision with magnetic rhythm. His music celebrates retro-modern fusion, combining elements of 80s synthwave, deep electronic grooves, and architectural sound design that elevates every space.</p>
                   <div class="stats">
                     <div class="stat">
-                      <span class="stat-number">500+</span>
+                      <span class="stat-number">200+</span>
                       <span class="stat-label">Events</span>
                     </div>
                     <div class="stat">
-                      <span class="stat-number">10+</span>
+                      <span class="stat-number">5+</span>
                       <span class="stat-label">Years</span>
                     </div>
                     <div class="stat">
-                      <span class="stat-number">50K+</span>
+                      <span class="stat-number">25K+</span>
                       <span class="stat-label">Happy Guests</span>
                     </div>
                   </div>
