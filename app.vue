@@ -56,7 +56,7 @@
           <div class="mobile-menu-footer">
             <div class="mobile-menu-contact">
               <span class="contact-label">EMAIL</span>
-              <span class="contact-value">hello@djronn.com</span>
+              <span class="contact-value">Ron.architactofsound@gmail.com</span>
             </div>
             <div class="mobile-menu-social">
               <a href="#" aria-label="Instagram">
@@ -156,12 +156,22 @@
               <span class="gallery-label">STUDIO SETUP</span>
             </div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item gallery-video">
+            <iframe
+              src="https://www.youtube.com/embed/YYpswmKpD3g?autoplay=1&mute=1&loop=1&playlist=YYpswmKpD3g"
+              title="RONN Performance"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="gallery-youtube"
+            ></iframe>
+          </div>
+          <!-- <div class="gallery-item">
             <img src="/IMG-20251106-WA0051.jpg" alt="DJ Setup">
             <div class="gallery-overlay">
               <span class="gallery-label">CLUB NIGHT</span>
             </div>
-          </div>
+          </div> -->
           <div class="gallery-item">
             <img src="/IMG-20251106-WA0052.jpg" alt="Studio">
             <div class="gallery-overlay">
@@ -272,7 +282,7 @@
                 </div>
                 <div>
                   <span class="detail-label">EMAIL</span>
-                  <span class="detail-value">hello@djronn.com</span>
+                  <span class="detail-value">Ron.architactofsound@gmail.com</span>
                 </div>
               </div>
               <div class="detail-item">
@@ -418,7 +428,7 @@
             <p>Architect of Sound</p>
           </div>
           <div class="footer-social">
-            <a href="#" class="social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/ronn.architectofsound?igsh=aGN1OWlrbjRlcWQ4" class="social-link" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
                 <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
@@ -436,7 +446,7 @@
                 <path d="M7 9C9 8 15 8 17 9M7 12C9 11 15 11 17 12M9 15C10 14.5 14 14.5 15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </a>
-            <a href="#" class="social-link" aria-label="YouTube">
+            <a href="https://youtube.com/shorts/YYpswmKpD3g?si=URqmaxMroT0WWoRM" class="social-link" aria-label="YouTube">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
                 <path d="M10 9L15 12L10 15V9Z" fill="currentColor"/>
