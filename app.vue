@@ -182,9 +182,19 @@
       <div class="container">
         <div class="cover-content">
           <div class="cover-bottom">
-            <div class="cover-bottom-image">
-              <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v&autoplay=1&mute=1&loop=1&playlist=icSEvMGsyPU&controls=0&showinfo=0&rel=0&modestbranding=1"
+                title="DJ RONN Performance"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="cover-video"
+              ></iframe>
             </div>
+            <!-- <div class="cover-bottom-image">
+              <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
+            </div> -->
             <div class="cover-bottom-text">
               <h2>Welcome to RONN,<br>the pulsating heart<br>of musical innovation.</h2>
             </div>
@@ -901,11 +911,26 @@ const handleSubmit = async () => {
   aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2),
+              0 0 100px rgba(255, 0, 255, 0.1);
 }
 
-.cover-image {
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+}
+
+.cover-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   object-fit: cover;
 }
 
@@ -915,10 +940,11 @@ const handleSubmit = async () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
   display: flex;
   align-items: center;
   padding: 4rem;
+  z-index: 2;
 }
 
 .cover-title {
@@ -937,6 +963,21 @@ const handleSubmit = async () => {
   align-items: center;
 }
 
+.cover-bottom .video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56%; /* 4:3 aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.3),
+              0 0 100px rgba(255, 0, 255, 0.2),
+              inset 0 0 0 1px rgba(0, 255, 255, 0.1);
+}
+
+/* .cover-bottom .video-wrapper iframe {
+} */
+
 .cover-bottom-image {
   position: relative;
   width: 100%;
@@ -952,15 +993,18 @@ const handleSubmit = async () => {
 }
 
 .cover-bottom-text {
-  padding: 2rem;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cover-bottom-text h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 900;
   color: #fff;
-  line-height: 1.3;
-  letter-spacing: -0.01em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
@@ -1818,19 +1862,25 @@ const handleSubmit = async () => {
     align-items: stretch;
   }
 
+  .cover-bottom .video-wrapper {
+    padding-bottom: 100%; /* Square aspect ratio on mobile */
+  }
+
   .cover-bottom-image {
     aspect-ratio: 1/1;
   }
 
   .cover-bottom-text {
-    padding: 0.5rem 0;
+    padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .cover-bottom-text h2 {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.3;
+    text-align: center;
   }
 
   .hero {
