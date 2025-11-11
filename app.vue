@@ -139,11 +139,16 @@
         <span class="label center">GALLERY</span>
         <h2 class="section-title">IN ACTION</h2>
         <div class="gallery-grid">
-          <div class="gallery-item large">
-            <img src="/dj.jpg" alt="RONN Performance">
-            <div class="gallery-overlay">
-              <span class="gallery-label">LIVE PERFORMANCE</span>
-            </div>
+          <div class="gallery-item large gallery-video">
+            <iframe
+              ref="galleryVideo"
+              src="https://www.youtube.com/embed/utf8Y_Jipy0?autoplay=1&mute=1&loop=1&playlist=utf8Y_Jipy0"
+              title="RONN Performance"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="gallery-youtube"
+            ></iframe>
           </div>
           <div class="gallery-item">
             <img src="/gallery-2.jpg" alt="Sound Equipment">
@@ -448,7 +453,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const formData = ref({
   firstName: '',
@@ -465,6 +470,7 @@ const isSubmitting = ref(false)
 const submitMessage = ref('')
 const submitError = ref(false)
 const mobileMenuOpen = ref(false)
+const galleryVideo = ref(null)
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -510,6 +516,29 @@ const handleSubmit = async () => {
     isSubmitting.value = false
   }
 }
+
+onMounted(() => {
+  // Intersection Observer for gallery video autoplay
+  if (galleryVideo.value) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Video is in view, it will autoplay due to the autoplay parameter
+            const iframe = entry.target
+            const src = iframe.src
+            if (!src.includes('autoplay=1')) {
+              iframe.src = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`
+            }
+          }
+        })
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    )
+
+    observer.observe(galleryVideo.value)
+  }
+})
 </script>
 
 <style scoped>
@@ -1413,6 +1442,26 @@ const handleSubmit = async () => {
 .gallery-item.large {
   grid-row: span 2;
   aspect-ratio: auto;
+  min-height: 400px;
+}
+
+.gallery-video {
+  cursor: default;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-youtube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  pointer-events: auto;
 }
 
 .gallery-item img {
@@ -2002,6 +2051,20 @@ const handleSubmit = async () => {
 
   .gallery-item.large {
     grid-row: span 1;
+    aspect-ratio: 1;
+  }
+
+  .gallery-item.large.gallery-video {
+    aspect-ratio: 9/16;
+    max-height: 600px;
+    height: auto;
+  }
+
+  .gallery-youtube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
   }
 
   .services-grid {
