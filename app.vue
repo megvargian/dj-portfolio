@@ -144,7 +144,7 @@
             </div>
           </div>
           <div class="gallery-item">
-            <img src="/IMG-20251106-WA0050.jpg" alt="Sound Equipment">
+            <img src="/gallery-2.jpg" alt="Sound Equipment">
             <div class="gallery-overlay">
               <span class="gallery-label">STUDIO SETUP</span>
             </div>
@@ -196,7 +196,8 @@
               <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
             </div> -->
             <div class="cover-bottom-text">
-              <h2>Welcome to RONN,<br>the pulsating heart<br>of musical innovation.</h2>
+              <h2>Minimalism a dialogue <br> between space and human emotion <br> by Ronn Architect of Sound</h2>
+              <p>Ronn talks about exploring the philosophy of minimalism as a profound form of design and self-expression, discussing how creating spaces with intentionality can liberate the human spirit and foster mindfulness through simplicity.</p>
             </div>
           </div>
         </div>
@@ -1001,8 +1002,10 @@ const handleSubmit = async () => {
 .cover-bottom-text {
   padding: 3rem 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1.5rem;
 }
 
 .cover-bottom-text h2 {
@@ -1012,6 +1015,15 @@ const handleSubmit = async () => {
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin: 0;
+}
+
+.cover-bottom-text p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: #999;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+  max-width: 90%;
 }
 
 /* Hero Section */
@@ -1879,14 +1891,22 @@ const handleSubmit = async () => {
   .cover-bottom-text {
     padding: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
   }
 
   .cover-bottom-text h2 {
     font-size: 1rem;
     line-height: 1.3;
     text-align: center;
+  }
+
+  .cover-bottom-text p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 100%;
   }
 
   .hero {
