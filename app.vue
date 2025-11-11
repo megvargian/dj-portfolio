@@ -88,7 +88,7 @@
       <div class="container">
         <div class="cover-content">
           <div class="cover-hero">
-            <img src="/ronn.jpg" alt="DJ RONN Cover" class="cover-image">
+            <img src="/main-img-min.png" alt="DJ RONN Cover" class="cover-image">
             <div class="cover-overlay">
               <h1 class="cover-title">Home of global<br>talented artists</h1>
             </div>
