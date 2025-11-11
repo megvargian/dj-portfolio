@@ -89,9 +89,11 @@
         <div class="cover-content">
           <div class="cover-hero">
             <img src="/main-img-min-1.jpg" alt="DJ RONN Cover" class="cover-image">
-            <!-- <div class="cover-overlay">
-              <h1 class="cover-title">Home of global<br>talented artists</h1>
-            </div> -->
+            <div class="cover-overlay">
+              <div class="architect-badge">
+                <span class="architect-text">Architect of Sound</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -511,6 +513,8 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -950,7 +954,7 @@ const handleSubmit = async () => {
   height: 100%;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 4rem;
 }
 
@@ -961,6 +965,23 @@ const handleSubmit = async () => {
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0;
+}
+
+.architect-badge {
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: inline-block;
+}
+
+.architect-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 4rem);
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
 }
 
 .cover-bottom {
@@ -1868,6 +1889,14 @@ const handleSubmit = async () => {
 
   .cover-overlay {
     padding: 2rem 1.5rem;
+  }
+
+  .architect-badge {
+    padding: 0;
+  }
+
+  .architect-text {
+    font-size: clamp(1rem, 4vw, 1.5rem);
   }
 
   .cover-title {
