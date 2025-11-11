@@ -214,7 +214,7 @@
     <!-- Services Section -->
     <section class="services" id="services">
       <div class="container">
-        <span class="label center">SERVICES</span>
+        <span class="label center">EXPERIENCE</span>
         <h2 class="section-title">WHAT I OFFER</h2>
         <div class="services-grid">
           <div class="service-card">
@@ -1053,7 +1053,7 @@ onMounted(() => {
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1.5rem;
 }
@@ -1065,13 +1065,14 @@ onMounted(() => {
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin: 0;
+  text-align: left;
 }
 
 .cover-bottom-text p {
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   color: #999;
   line-height: 1.7;
-  text-align: center;
+  text-align: left;
   margin: 0;
   max-width: 90%;
 }
