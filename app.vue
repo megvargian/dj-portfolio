@@ -89,9 +89,9 @@
         <div class="cover-content">
           <div class="cover-hero">
             <img src="/main-img-min-1.jpg" alt="DJ RONN Cover" class="cover-image">
-            <div class="cover-overlay">
+            <!-- <div class="cover-overlay">
               <h1 class="cover-title">Home of global<br>talented artists</h1>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -894,7 +894,7 @@ const handleSubmit = async () => {
 
 /* Cover Section */
 .cover-section {
-  padding: clamp(8rem, 12vw, 12rem) 0 clamp(4rem, 8vw, 8rem);
+  padding: clamp(4rem, 8vw, 6rem) 0 clamp(2rem, 4vw, 4rem);
   background: #000;
   position: relative;
 }
@@ -911,8 +911,15 @@ const handleSubmit = async () => {
   aspect-ratio: 16/9;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 255, 255, 0.2),
-              0 0 100px rgba(255, 0, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 10px 40px rgba(0, 255, 255, 0.1);
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .video-wrapper {
@@ -940,11 +947,10 @@ const handleSubmit = async () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
   display: flex;
   align-items: center;
   padding: 4rem;
-  z-index: 2;
 }
 
 .cover-title {
@@ -1231,7 +1237,7 @@ const handleSubmit = async () => {
 
 /* About Section */
 .about {
-  padding: clamp(6rem, 15vw, 10rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0;
   background: #0a0a0a;
   position: relative;
 }
@@ -1250,7 +1256,7 @@ const handleSubmit = async () => {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -1343,7 +1349,7 @@ const handleSubmit = async () => {
 
 /* Gallery Section */
 .gallery {
-  padding: clamp(6rem, 15vw, 10rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0;
   background: #000;
 }
 
@@ -1351,7 +1357,7 @@ const handleSubmit = async () => {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 900;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   letter-spacing: clamp(0.2rem, 1vw, 0.8rem);
   line-height: 1.2;
 }
@@ -1418,7 +1424,7 @@ const handleSubmit = async () => {
 
 /* Services Section */
 .services {
-  padding: clamp(6rem, 15vw, 10rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0;
   background: #0a0a0a;
   position: relative;
 }
@@ -1516,7 +1522,7 @@ const handleSubmit = async () => {
 
 /* Booking Section */
 .booking {
-  padding: clamp(6rem, 15vw, 10rem) 0;
+  padding: clamp(3rem, 8vw, 6rem) 0;
   background: #000;
   position: relative;
 }
@@ -1818,12 +1824,12 @@ const handleSubmit = async () => {
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .booking-content {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .services-grid {
@@ -1837,11 +1843,11 @@ const handleSubmit = async () => {
   }
 
   .cover-section {
-    padding: 6rem 0 3rem;
+    padding: 3rem 0 2rem;
   }
 
   .cover-content {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .cover-hero {
@@ -1920,6 +1926,7 @@ const handleSubmit = async () => {
   .section-title {
     font-size: 2rem;
     letter-spacing: 0.3rem;
+    margin-bottom: 2rem;
   }
 
   .about-content h2 {
