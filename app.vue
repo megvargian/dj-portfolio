@@ -142,7 +142,7 @@
           <div class="gallery-item large gallery-video">
             <iframe
               ref="galleryVideo"
-              src="https://www.youtube.com/embed/utf8Y_Jipy0?autoplay=1&mute=1&loop=1&playlist=utf8Y_Jipy0"
+              src="https://www.youtube.com/embed/utf8Y_Jipy0"
               title="RONN Performance"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -158,7 +158,7 @@
           </div>
           <div class="gallery-item gallery-video">
             <iframe
-              src="https://www.youtube.com/embed/YYpswmKpD3g?autoplay=1&mute=1&loop=1&playlist=YYpswmKpD3g"
+              src="https://www.youtube.com/embed/YYpswmKpD3g"
               title="RONN Performance"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -201,7 +201,7 @@
           <div class="cover-bottom">
             <div class="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v&autoplay=1&mute=1&loop=1&playlist=icSEvMGsyPU&controls=0&showinfo=0&rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v"
                 title="DJ RONN Performance"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -576,29 +576,6 @@ const handleSubmit = async () => {
     isSubmitting.value = false
   }
 }
-
-onMounted(() => {
-  // Intersection Observer for gallery video autoplay
-  if (galleryVideo.value) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // Video is in view, it will autoplay due to the autoplay parameter
-            const iframe = entry.target
-            const src = iframe.src
-            if (!src.includes('autoplay=1')) {
-              iframe.src = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`
-            }
-          }
-        })
-      },
-      { threshold: 0.5 } // Trigger when 50% of the video is visible
-    )
-
-    observer.observe(galleryVideo.value)
-  }
-})
 </script>
 
 <style scoped>
