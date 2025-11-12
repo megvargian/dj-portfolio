@@ -13,7 +13,7 @@
             <a href="#services">SERVICES</a>
             <a href="#booking" class="nav-cta">BOOK NOW</a>
           </div>
-          <button class="mobile-menu-btn" @click="toggleMobileMenu" :class="{ active: mobileMenuOpen }">
+          <button class="mobile-menu-btn" @click="toggleMobileMenu" :class="{ active: mobileMenuOpen }" aria-label="Toggle mobile menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -29,7 +29,7 @@
         <div class="mobile-menu-content" @click.stop>
           <div class="mobile-menu-header">
             <div class="mobile-menu-logo">RONN</div>
-            <button class="mobile-menu-close" @click="closeMobileMenu">
+            <button class="mobile-menu-close" @click="closeMobileMenu" aria-label="Close mobile menu">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
@@ -83,6 +83,7 @@
       </div>
     </Transition>
 
+    <main>
     <!-- Cover Section -->
     <section class="cover-section">
       <div class="container">
@@ -484,6 +485,7 @@
         </div>
       </div>
     </section> -->
+    </main>
 
 
     <!-- Footer -->
@@ -666,7 +668,7 @@ const handleSubmit = async () => {
 }
 
 .nav-links a {
-  color: #999;
+  color: #b3b3b3;
   text-decoration: none;
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
@@ -981,7 +983,7 @@ const handleSubmit = async () => {
   display: inline-block;
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
-  color: #666;
+  color: #999;
   text-transform: uppercase;
   margin-bottom: 1rem;
   font-weight: 600;
