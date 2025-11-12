@@ -203,7 +203,7 @@
                 src="https://www.youtube.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v"
                 title="DJ RONN Performance"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
                 class="cover-video"
               ></iframe>
