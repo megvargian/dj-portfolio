@@ -141,10 +141,11 @@
         <div class="gallery-grid">
           <div class="gallery-item large gallery-video">
             <iframe
-              src="https://www.youtube.com/embed/utf8Y_Jipy0"
+              src="https://www.youtube-nocookie.com/embed/utf8Y_Jipy0"
               title="RONN Performance"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               class="gallery-youtube"
             ></iframe>
@@ -157,10 +158,11 @@
           </div>
           <div class="gallery-item gallery-video">
             <iframe
-              src="https://www.youtube.com/embed/YYpswmKpD3g"
+              src="https://www.youtube-nocookie.com/embed/YYpswmKpD3g"
               title="RONN Performance"
               frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               class="gallery-youtube"
             ></iframe>
@@ -200,10 +202,11 @@
           <div class="cover-bottom">
             <div class="video-wrapper">
               <iframe
-                src="https://www.youtube.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v"
+                src="https://www.youtube-nocookie.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v"
                 title="DJ RONN Performance"
                 frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
                 class="cover-video"
               ></iframe>
@@ -362,7 +365,9 @@
           <form class="booking-form" @submit.prevent="handleSubmit">
             <div class="form-row">
               <div class="form-group">
+                <label for="firstName" class="sr-only">First Name</label>
                 <input
+                  id="firstName"
                   v-model="formData.firstName"
                   type="text"
                   placeholder="First Name"
@@ -370,7 +375,9 @@
                 >
               </div>
               <div class="form-group">
+                <label for="lastName" class="sr-only">Last Name</label>
                 <input
+                  id="lastName"
                   v-model="formData.lastName"
                   type="text"
                   placeholder="Last Name"
@@ -379,7 +386,9 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="email" class="sr-only">Email Address</label>
               <input
+                id="email"
                 v-model="formData.email"
                 type="email"
                 placeholder="Email Address"
@@ -387,7 +396,9 @@
               >
             </div>
             <div class="form-group">
+              <label for="phone" class="sr-only">Phone Number</label>
               <input
+                id="phone"
                 v-model="formData.phone"
                 type="tel"
                 placeholder="Phone Number"
@@ -396,7 +407,9 @@
             </div>
             <div class="form-row">
               <div class="form-group">
+                <label for="eventDate" class="sr-only">Event Date</label>
                 <input
+                  id="eventDate"
                   v-model="formData.eventDate"
                   type="date"
                   placeholder="Event Date"
@@ -404,7 +417,8 @@
                 >
               </div>
               <div class="form-group">
-                <select v-model="formData.eventType" required>
+                <label for="eventType" class="sr-only">Event Type</label>
+                <select id="eventType" v-model="formData.eventType" required>
                   <option value="" disabled selected>Event Type</option>
                   <option value="wedding">Wedding</option>
                   <option value="corporate">Corporate Event</option>
@@ -416,7 +430,9 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="location" class="sr-only">Event Location</label>
               <input
+                id="location"
                 v-model="formData.location"
                 type="text"
                 placeholder="Event Location"
@@ -424,7 +440,9 @@
               >
             </div>
             <div class="form-group">
+              <label for="message" class="sr-only">Tell me about your event</label>
               <textarea
+                id="message"
                 v-model="formData.message"
                 placeholder="Tell me about your event..."
                 rows="5"
@@ -583,6 +601,19 @@ const handleSubmit = async () => {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Screen reader only labels for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .landing-page {

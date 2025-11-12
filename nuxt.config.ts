@@ -5,6 +5,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
       title: 'DJ RONN - Architect of Sound | Electronic Music DJ & Producer',
       meta: [
         { charset: 'utf-8' },
