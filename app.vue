@@ -184,12 +184,12 @@
               <span class="gallery-label">EVENT SETUP</span>
             </div>
           </div>
-          <div class="gallery-item">
+          <!-- <div class="gallery-item">
             <img src="/WhatsApp Image 2025-11-06 at 22.16.47_1d2c8334.jpg" alt="Performance">
             <div class="gallery-overlay">
               <span class="gallery-label">PERFORMANCE</span>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -224,8 +224,8 @@
     <!-- Services Section -->
     <section class="services" id="services">
       <div class="container">
-        <span class="label center">EXPERIENCE</span>
-        <h2 class="section-title">WHAT I OFFER</h2>
+        <!-- <span class="label center">EXPERIENCE</span> -->
+        <h2 class="section-title">EXPERIENCE</h2>
         <div class="services-grid">
           <div class="service-card">
             <div class="service-number">01</div>
