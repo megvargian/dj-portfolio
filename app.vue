@@ -141,7 +141,6 @@
         <div class="gallery-grid">
           <div class="gallery-item large gallery-video">
             <iframe
-              ref="galleryVideo"
               src="https://www.youtube.com/embed/utf8Y_Jipy0"
               title="RONN Performance"
               frameborder="0"
@@ -513,7 +512,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
 const formData = ref({
   firstName: '',
@@ -530,7 +529,6 @@ const isSubmitting = ref(false)
 const submitMessage = ref('')
 const submitError = ref(false)
 const mobileMenuOpen = ref(false)
-const galleryVideo = ref(null)
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
