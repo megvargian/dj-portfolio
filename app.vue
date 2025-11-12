@@ -270,43 +270,43 @@
       <div class="container">
         <div class="thumbnails-grid">
           <div class="thumbnail-item">
-            <img src="/main-img-min-1.jpg" alt="DJ Performance">
+            <img src="/thumnail-1.jpg" alt="DJ Performance">
             <div class="gallery-overlay">
               <span class="gallery-label">PERFORMANCE</span>
             </div>
           </div>
           <div class="thumbnail-item">
-            <img src="/ronn.jpg" alt="DJ RONN">
+            <img src="/thumnail-2.jpg" alt="DJ RONN">
             <div class="gallery-overlay">
               <span class="gallery-label">RONN</span>
             </div>
           </div>
           <div class="thumbnail-item">
-            <img src="/dj.jpg" alt="DJ Setup">
+            <img src="/thumnail-3.jpg" alt="DJ Setup">
             <div class="gallery-overlay">
               <span class="gallery-label">LIVE SET</span>
             </div>
           </div>
           <div class="thumbnail-item">
-            <img src="/IMG-20251106-WA0051.jpg" alt="Club Night">
+            <img src="/thumnail-4.jpg" alt="Club Night">
             <div class="gallery-overlay">
               <span class="gallery-label">CLUB NIGHT</span>
             </div>
           </div>
           <div class="thumbnail-item">
-            <img src="/IMG-20251106-WA0052.jpg" alt="Production">
+            <img src="/thumnail-5.jpg" alt="Production">
             <div class="gallery-overlay">
               <span class="gallery-label">PRODUCTION</span>
             </div>
           </div>
           <div class="thumbnail-item">
-            <img src="/WhatsApp Image 2025-11-06 at 22.16.47_0c139c20.jpg" alt="Event Setup">
+            <img src="/thumnail-6.jpg" alt="Event Setup">
             <div class="gallery-overlay">
               <span class="gallery-label">EVENT SETUP</span>
             </div>
           </div>
           <div class="thumbnail-item">
-            <img src="/WhatsApp Image 2025-11-06 at 22.16.47_1d2c8334.jpg" alt="Performance">
+            <img src="/thumnail-7.jpg" alt="Performance">
             <div class="gallery-overlay">
               <span class="gallery-label">PERFORMANCE</span>
             </div>
