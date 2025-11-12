@@ -1006,7 +1006,7 @@ const handleSubmit = async () => {
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%);
-  pointer-events: none;
+  pointer-events: auto;
   object-fit: cover;
 }
 
