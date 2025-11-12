@@ -88,7 +88,7 @@
       <div class="container">
         <div class="cover-content">
           <div class="cover-hero">
-            <img src="/main-img-min-1.jpg" alt="DJ RONN Cover" class="cover-image">
+            <img src="/main-img-min.jpg" alt="DJ RONN Cover" class="cover-image">
             <div class="cover-overlay">
               <div class="architect-badge">
                 <span class="architect-text">Architect of Sound</span>
