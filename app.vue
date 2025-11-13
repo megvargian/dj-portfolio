@@ -152,9 +152,9 @@
             ></iframe>
           </div>
           <div class="gallery-item">
-            <img src="/gallery-2.jpg" alt="Sound Equipment">
+            <img src="/gallery-5.jpg" alt="Studio">
             <div class="gallery-overlay">
-              <span class="gallery-label">STUDIO SETUP</span>
+              <span class="gallery-label">PRODUCTION</span>
             </div>
           </div>
           <div class="gallery-item gallery-video">
@@ -175,9 +175,9 @@
             </div>
           </div> -->
           <div class="gallery-item">
-            <img src="/gallery-5.jpg" alt="Studio">
+            <img src="/gallery-2.jpg" alt="Sound Equipment">
             <div class="gallery-overlay">
-              <span class="gallery-label">PRODUCTION</span>
+              <span class="gallery-label">STUDIO SETUP</span>
             </div>
           </div>
           <div class="gallery-item">
