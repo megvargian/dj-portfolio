@@ -106,7 +106,7 @@
               <div class="about-grid">
                 <div class="about-image">
                   <div class="image-wrapper">
-                    <img src="/ronn.jpg" alt="DJ RONN">
+                    <img src="/ronn-1.jpg" alt="DJ RONN">
                     <div class="image-overlay"></div>
                   </div>
                 </div>
