@@ -175,7 +175,7 @@
             </div>
           </div> -->
           <div class="gallery-item">
-            <img src="/IMG-20251106-WA0052.jpg" alt="Studio">
+            <img src="/gallery-5.jpg" alt="Studio">
             <div class="gallery-overlay">
               <span class="gallery-label">PRODUCTION</span>
             </div>
