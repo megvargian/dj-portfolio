@@ -56,7 +56,7 @@
           <div class="mobile-menu-footer">
             <div class="mobile-menu-contact">
               <span class="contact-label">EMAIL</span>
-              <span class="contact-value">Ron.architactofsound@gmail.com</span>
+              <span class="contact-value">Ronn@ronnarchitectofsound.com</span>
             </div>
             <div class="mobile-menu-social">
               <a href="#" aria-label="Instagram">
@@ -168,12 +168,6 @@
               class="gallery-youtube"
             ></iframe>
           </div>
-          <!-- <div class="gallery-item">
-            <img src="/IMG-20251106-WA0051.jpg" alt="DJ Setup">
-            <div class="gallery-overlay">
-              <span class="gallery-label">CLUB NIGHT</span>
-            </div>
-          </div> -->
           <div class="gallery-item">
             <img src="/gallery-2.jpg" alt="Sound Equipment">
             <div class="gallery-overlay">
@@ -181,17 +175,11 @@
             </div>
           </div>
           <div class="gallery-item">
-            <img src="/WhatsApp Image 2025-11-06 at 22.16.47_0c139c20.jpg" alt="Event Setup">
+            <img src="/gallery-6.jpg" alt="Event Setup">
             <div class="gallery-overlay">
               <span class="gallery-label">EVENT SETUP</span>
             </div>
           </div>
-          <!-- <div class="gallery-item">
-            <img src="/WhatsApp Image 2025-11-06 at 22.16.47_1d2c8334.jpg" alt="Performance">
-            <div class="gallery-overlay">
-              <span class="gallery-label">PERFORMANCE</span>
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
@@ -227,7 +215,6 @@
     <!-- Services Section -->
     <section class="services" id="services">
       <div class="container">
-        <!-- <span class="label center">EXPERIENCE</span> -->
         <h2 class="section-title">EXPERIENCE</h2>
         <div class="services-grid">
           <div class="service-card">
@@ -335,7 +322,7 @@
                 </div>
                 <div>
                   <span class="detail-label">EMAIL</span>
-                  <span class="detail-value">Ron.architactofsound@gmail.com</span>
+                  <span class="detail-value">Ronn@ronnarchitectofsound.com</span>
                 </div>
               </div>
               <div class="detail-item">
@@ -509,12 +496,6 @@
                 <path d="M3 12L3 14M5 10L5 16M7 8L7 18M9 6L9 20M11 7L11 19M13 9L13 17M15 8L15 18M17 7L17 19M19 9L19 17M21 11L21 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </a>
-            <!-- <a href="#" class="social-link" aria-label="Spotify">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                <path d="M7 9C9 8 15 8 17 9M7 12C9 11 15 11 17 12M9 15C10 14.5 14 14.5 15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </a> -->
             <a href="https://youtube.com/shorts/YYpswmKpD3g?si=URqmaxMroT0WWoRM" class="social-link" aria-label="YouTube">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
