@@ -142,10 +142,10 @@
         <div class="gallery-grid">
           <div class="gallery-item large gallery-video">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/utf8Y_Jipy0"
+              src="https://player.vimeo.com/video/1136859852?badge=0&autopause=0&player_id=0&app_id=58479"
               title="RONN Performance"
               frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               class="gallery-youtube"
@@ -159,10 +159,10 @@
           </div>
           <div class="gallery-item gallery-video">
             <iframe
-              src="https://www.youtube-nocookie.com/embed/YYpswmKpD3g"
+              src="https://player.vimeo.com/video/1136848158?badge=0&autopause=0&player_id=0&app_id=58479"
               title="RONN Performance"
               frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
               class="gallery-youtube"
@@ -203,10 +203,10 @@
           <div class="cover-bottom">
             <div class="video-wrapper">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/icSEvMGsyPU?si=RV5Gg0IgrnQDus4v"
+                src="https://player.vimeo.com/video/1136847359?badge=0&autopause=0&player_id=0&app_id=58479"
                 title="DJ RONN Performance"
                 frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
                 class="cover-video"
