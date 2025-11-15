@@ -25,13 +25,13 @@ jobs:
           npm install
           npm run generate
 
-      - name: Deploy via rsync over SSH
-        uses: burnett01/rsync-deployments@6.0.0
-        with:
-          switches: -avzr --delete
-          path: .output/public/
-          remote_path: ${{ secrets.CPANEL_PUBLIC_PATH }}/
-          remote_host: ${{ secrets.CPANEL_HOST }}
-          remote_user: ${{ secrets.CPANEL_USERNAME }}
-          remote_key: ${{ secrets.CPANEL_SSH_KEY }}
-          remote_port: ${{ secrets.CPANEL_SSH_PORT }}
+      - name: Install rsync and sshpass
+        run: sudo apt-get update && sudo apt-get install -y rsync sshpass
+
+      - name: Deploy via rsync with password
+        env:
+          RSYNC_PASSWORD: ${{ secrets.CPANEL_PASSWORD }}
+        run: |
+          sshpass -e rsync -avzr --delete -e "ssh -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no" \
+          .output/public/ \
+          ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_HOST }}:${{ secrets.CPANEL_PUBLIC_PATH }}/
