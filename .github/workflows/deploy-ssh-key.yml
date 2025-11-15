@@ -25,16 +25,37 @@ jobs:
           npm install
           npm run generate
 
-      - name: Setup SSH Key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.CPANEL_SSH_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -p ${{ secrets.CPANEL_SSH_PORT }} ${{ secrets.CPANEL_HOST }} >> ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
 
-      - name: Deploy via rsync with SSH key
+          # Add SSH key if provided
+          if [ -n "${{ secrets.CPANEL_SSH_KEY }}" ]; then
+            echo "${{ secrets.CPANEL_SSH_KEY }}" > ~/.ssh/id_ed25519
+            chmod 600 ~/.ssh/id_ed25519
+          fi
+
+          # Configure SSH
+          cat > ~/.ssh/config << EOF
+          Host cpanel
+            HostName ${{ secrets.CPANEL_HOST }}
+            User ${{ secrets.CPANEL_USERNAME }}
+            Port ${{ secrets.CPANEL_SSH_PORT }}
+            StrictHostKeyChecking no
+            UserKnownHostsFile /dev/null
+            IdentityFile ~/.ssh/id_ed25519
+          EOF
+          chmod 600 ~/.ssh/config
+
+      - name: Test SSH Connection
+        run: |
+          echo "Testing SSH connection..."
+          ssh cpanel "pwd && ls -la" || echo "SSH test failed - check your credentials"
+
+      - name: Deploy via rsync
         run: |
           rsync -avzr --delete \
-          -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no" \
+          --rsync-path="mkdir -p ${{ secrets.CPANEL_PUBLIC_PATH }} && rsync" \
           .output/public/ \
-          ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_HOST }}:${{ secrets.CPANEL_PUBLIC_PATH }}/
+          cpanel:${{ secrets.CPANEL_PUBLIC_PATH }}/
