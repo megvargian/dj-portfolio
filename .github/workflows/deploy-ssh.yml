@@ -33,6 +33,6 @@ jobs:
           SSHPASS: ${{ secrets.CPANEL_PASSWORD }}
         run: |
           sshpass -e rsync -avzr --delete \
-          -e "ssh -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no" \
+          -e "ssh -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no" \
           .output/public/ \
           ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_HOST }}:${{ secrets.CPANEL_PUBLIC_PATH }}/
