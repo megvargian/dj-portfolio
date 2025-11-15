@@ -30,8 +30,9 @@ jobs:
 
       - name: Deploy via rsync with password
         env:
-          RSYNC_PASSWORD: ${{ secrets.CPANEL_PASSWORD }}
+          SSHPASS: ${{ secrets.CPANEL_PASSWORD }}
         run: |
-          sshpass -e rsync -avzr --delete -e "ssh -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no" \
+          sshpass -e rsync -avzr --delete \
+          -e "ssh -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no" \
           .output/public/ \
           ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_HOST }}:${{ secrets.CPANEL_PUBLIC_PATH }}/
