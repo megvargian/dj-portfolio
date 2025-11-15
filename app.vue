@@ -437,9 +437,17 @@
                 required
               ></textarea>
             </div>
-            <button type="submit" class="submit-btn" :disabled="isSubmitting">
-              {{ isSubmitting ? 'SENDING...' : 'SEND BOOKING REQUEST' }}
-            </button>
+            <div class="form-actions">
+              <button type="submit" class="submit-btn" :disabled="isSubmitting">
+                {{ isSubmitting ? 'SENDING...' : 'SEND VIA EMAIL' }}
+              </button>
+              <button type="button" class="submit-btn whatsapp-btn" @click="sendViaWhatsApp" :disabled="isSubmitting">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; margin-right: 8px;">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                </svg>
+                SEND VIA WHATSAPP
+              </button>
+            </div>
             <p v-if="submitMessage" class="submit-message" :class="{ error: submitError }">
               {{ submitMessage }}
             </p>
@@ -540,6 +548,41 @@ const toggleMobileMenu = () => {
   }
 }
 
+const sendViaWhatsApp = () => {
+  // Validate required fields
+  if (!formData.value.firstName || !formData.value.lastName || !formData.value.phone || !formData.value.message) {
+    submitMessage.value = 'Please fill in all required fields (Name, Phone, Message)'
+    submitError.value = true
+    return
+  }
+
+  // Format the message
+  const whatsappMessage = `*New Booking Request*
+
+*Name:* ${formData.value.firstName} ${formData.value.lastName}
+*Email:* ${formData.value.email || 'Not provided'}
+*Phone:* ${formData.value.phone}
+*Event Date:* ${formData.value.eventDate || 'Not specified'}
+*Event Type:* ${formData.value.eventType || 'Not specified'}
+*Location:* ${formData.value.location || 'Not specified'}
+
+*Message:*
+${formData.value.message}`
+
+  // Your WhatsApp number (include country code without + or spaces)
+  const whatsappNumber = '9613746927'
+
+  // Create WhatsApp URL
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+
+  // Open WhatsApp
+  window.open(whatsappUrl, '_blank')
+
+  // Show success message
+  submitMessage.value = 'Opening WhatsApp... Please send the message to complete your booking request.'
+  submitError.value = false
+}
+
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false
   document.body.style.overflow = ''
@@ -551,8 +594,28 @@ const handleSubmit = async () => {
   submitError.value = false
 
   try {
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // Send email using Formspree
+    const response = await fetch('https://formspree.io/f/xanyndok', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: `${formData.value.firstName} ${formData.value.lastName}`,
+        email: formData.value.email,
+        phone: formData.value.phone,
+        eventDate: formData.value.eventDate,
+        eventType: formData.value.eventType,
+        location: formData.value.location,
+        message: formData.value.message,
+        _replyto: formData.value.email,
+        _subject: `New Booking Request from ${formData.value.firstName} ${formData.value.lastName}`
+      })
+    })
+
+    if (!response.ok) {
+      throw new Error('Form submission failed')
+    }
 
     submitMessage.value = 'Booking request sent successfully! I\'ll get back to you within 24 hours.'
     submitError.value = false
@@ -569,7 +632,7 @@ const handleSubmit = async () => {
       message: ''
     }
   } catch (error) {
-    submitMessage.value = 'Something went wrong. Please try again.'
+    submitMessage.value = 'Something went wrong. Please try again or email directly at Ronn@ronnarchitectofsound.com'
     submitError.value = true
   } finally {
     isSubmitting.value = false
@@ -1819,8 +1882,20 @@ const handleSubmit = async () => {
   color: #666;
 }
 
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .form-actions {
+    flex-direction: row;
+  }
+}
+
 .submit-btn {
-  width: 100%;
+  flex: 1;
   padding: 1.4rem 2rem;
   background: linear-gradient(135deg, #00ffff, #ff00ff);
   border: none;
@@ -1832,11 +1907,23 @@ const handleSubmit = async () => {
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #fff;
 }
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0, 255, 255, 0.4);
+}
+
+.whatsapp-btn:hover:not(:disabled) {
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
 }
 
 .submit-btn:disabled {
