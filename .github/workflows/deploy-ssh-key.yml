@@ -53,9 +53,10 @@ jobs:
           echo "Testing SSH connection..."
           ssh cpanel "pwd && ls -la" || echo "SSH test failed - check your credentials"
 
-      - name: Deploy via rsync
+      - name: Clean remote directory
         run: |
-          rsync -avzr --delete \
-          --rsync-path="mkdir -p ${{ secrets.CPANEL_PUBLIC_PATH }} && rsync" \
-          .output/public/ \
-          cpanel:${{ secrets.CPANEL_PUBLIC_PATH }}/
+          ssh cpanel "rm -rf ${{ secrets.CPANEL_PUBLIC_PATH }}/*"
+
+      - name: Deploy via SCP
+        run: |
+          scp -r .output/public/* cpanel:${{ secrets.CPANEL_PUBLIC_PATH }}/
