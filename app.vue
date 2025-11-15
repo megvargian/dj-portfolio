@@ -56,7 +56,7 @@
           <div class="mobile-menu-footer">
             <div class="mobile-menu-contact">
               <span class="contact-label">EMAIL</span>
-              <span class="contact-value">Ronn@ronnarchitectofsound.com</span>
+              <a href="mailto:Ronn@ronnarchitectofsound.com" class="contact-value">Ronn@ronnarchitectofsound.com</a>
             </div>
             <div class="mobile-menu-social">
               <a href="#" aria-label="Instagram">
@@ -322,7 +322,7 @@
                 </div>
                 <div>
                   <span class="detail-label">EMAIL</span>
-                  <span class="detail-value">Ronn@ronnarchitectofsound.com</span>
+                  <a href="mailto:Ronn@ronnarchitectofsound.com" class="detail-value">Ronn@ronnarchitectofsound.com</a>
                 </div>
               </div>
               <div class="detail-item">
@@ -333,7 +333,7 @@
                 </div>
                 <div>
                   <span class="detail-label">PHONE</span>
-                  <span class="detail-value">+1 (555) 123-4567</span>
+                  <a href="tel:+9613746927" class="detail-value">+961 3 746 927</a>
                 </div>
               </div>
               <div class="detail-item">
@@ -505,7 +505,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 DJ RONN. All rights reserved. Designed with precision.</p>
+          <p>&copy; 2025 DJ RONN. All rights reserved. Designed with TellGngr Marketing.</p>
         </div>
       </div>
     </footer>
