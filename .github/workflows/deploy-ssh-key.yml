@@ -1,0 +1,40 @@
+name: Deploy to cPanel via SSH Key
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install and Build
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
+          npm run generate
+
+      - name: Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.CPANEL_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p ${{ secrets.CPANEL_SSH_PORT }} ${{ secrets.CPANEL_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via rsync with SSH key
+        run: |
+          rsync -avzr --delete \
+          -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.CPANEL_SSH_PORT }} -o StrictHostKeyChecking=no" \
+          .output/public/ \
+          ${{ secrets.CPANEL_USERNAME }}@${{ secrets.CPANEL_HOST }}:${{ secrets.CPANEL_PUBLIC_PATH }}/
