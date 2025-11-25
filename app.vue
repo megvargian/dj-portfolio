@@ -152,7 +152,7 @@
             ></iframe>
           </div>
           <div class="gallery-item">
-            <img src="/gallery-5.jpg" alt="Studio">
+            <img src="/event-1.jpg" alt="Studio">
             <div class="gallery-overlay">
               <span class="gallery-label">PRODUCTION</span>
             </div>
