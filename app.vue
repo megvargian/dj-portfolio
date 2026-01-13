@@ -5,7 +5,7 @@
       <div class="container">
         <div class="nav-content">
           <div class="nav-logo">
-            <img src="./public/logo.jpg" alt="DJ RONN" class="nav-logo-image">
+            <img src="./public/logo.jpg" alt="DJ RONN" class="nav-logo-image" />
           </div>
           <div class="nav-links">
             <a href="#about">ABOUT</a>
@@ -13,7 +13,13 @@
             <a href="#services">SERVICES</a>
             <a href="#booking" class="nav-cta">BOOK NOW</a>
           </div>
-          <button class="mobile-menu-btn" @click="toggleMobileMenu" :class="{ active: mobileMenuOpen }" aria-label="Toggle mobile menu" aria-expanded="false">
+          <button
+            class="mobile-menu-btn"
+            @click="toggleMobileMenu"
+            :class="{ active: mobileMenuOpen }"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -29,9 +35,22 @@
         <div class="mobile-menu-content" @click.stop>
           <div class="mobile-menu-header">
             <div class="mobile-menu-logo">RONN</div>
-            <button class="mobile-menu-close" @click="closeMobileMenu" aria-label="Close mobile menu">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <button
+              class="mobile-menu-close"
+              @click="closeMobileMenu"
+              aria-label="Close mobile menu"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
               </svg>
             </button>
           </div>
@@ -40,15 +59,27 @@
               <span class="link-number">01</span>
               <span class="link-text">ABOUT</span>
             </a>
-            <a href="#gallery" @click="closeMobileMenu" class="mobile-menu-link">
+            <a
+              href="#gallery"
+              @click="closeMobileMenu"
+              class="mobile-menu-link"
+            >
               <span class="link-number">02</span>
               <span class="link-text">GALLERY</span>
             </a>
-            <a href="#services" @click="closeMobileMenu" class="mobile-menu-link">
+            <a
+              href="#services"
+              @click="closeMobileMenu"
+              class="mobile-menu-link"
+            >
               <span class="link-number">03</span>
               <span class="link-text">SERVICES</span>
             </a>
-            <a href="#booking" @click="closeMobileMenu" class="mobile-menu-link">
+            <a
+              href="#booking"
+              @click="closeMobileMenu"
+              class="mobile-menu-link"
+            >
               <span class="link-number">04</span>
               <span class="link-text">BOOK NOW</span>
             </a>
@@ -56,25 +87,71 @@
           <div class="mobile-menu-footer">
             <div class="mobile-menu-contact">
               <span class="contact-label">EMAIL</span>
-              <a href="mailto:Ronn@ronnarchitectofsound.com" class="contact-value">Ronn@ronnarchitectofsound.com</a>
+              <a
+                href="mailto:Ronn@ronnarchitectofsound.com"
+                class="contact-value"
+                >Ronn@ronnarchitectofsound.com</a
+              >
             </div>
             <div class="mobile-menu-social">
               <a href="#" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-                  <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="20"
+                    height="20"
+                    rx="5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle cx="18" cy="6" r="1" fill="currentColor" />
                 </svg>
               </a>
               <a href="#" aria-label="SoundCloud">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 12L3 14M5 10L5 16M7 8L7 18M9 6L9 20M11 7L11 19M13 9L13 17M15 8L15 18M17 7L17 19M19 9L19 17M21 11L21 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 12L3 14M5 10L5 16M7 8L7 18M9 6L9 20M11 7L11 19M13 9L13 17M15 8L15 18M17 7L17 19M19 9L19 17M21 11L21 15"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </a>
               <a href="#" aria-label="Spotify">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                  <path d="M7 9C9 8 15 8 17 9M7 12C9 11 15 11 17 12M9 15C10 14.5 14 14.5 15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M7 9C9 8 15 8 17 9M7 12C9 11 15 11 17 12M9 15C10 14.5 14 14.5 15 15"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
                 </svg>
               </a>
             </div>
@@ -84,379 +161,520 @@
     </Transition>
 
     <main>
-    <!-- Cover Section -->
-    <section class="cover-section">
-      <div class="container">
-        <div class="cover-content">
-          <div class="cover-hero">
-            <img src="/main-img-min.jpg" alt="DJ RONN Cover" class="cover-image">
-            <div class="cover-overlay">
-              <div class="architect-badge">
-                <span class="architect-text">Architect of Sound</span>
+      <!-- Cover Section -->
+      <section class="cover-section">
+        <div class="container">
+          <div class="cover-content">
+            <div class="cover-hero">
+              <img
+                src="/main-img-min.jpg"
+                alt="DJ RONN Cover"
+                class="cover-image"
+              />
+              <div class="cover-overlay">
+                <div class="architect-badge">
+                  <span class="architect-text">Architect of Sound</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-image">
-            <div class="image-wrapper">
-              <img src="/ronn-1.jpg" alt="DJ RONN">
-              <div class="image-overlay"></div>
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-image">
+              <div class="image-wrapper">
+                <img src="/ronn-1.jpg" alt="DJ RONN" />
+                <div class="image-overlay"></div>
+              </div>
             </div>
-          </div>
-          <div class="about-content">
-            <span class="label">ABOUT</span>
-            <h2>DESIGNING SOUND IS DESIGNING EMOTION</h2>
-            <p>With a background in architecture and a passion for sonic design, Ronn creates soundscapes that fuse structure, emotion, and energy. Each set is crafted like a blueprint — layered, balanced, and built to move both mind and body.</p>
-            <p>Ronn has performed in some of the world's most design-forward venues across Paris, Dubai, Beirut, and Cyprus, delivering performances that merge aesthetic precision with magnetic rhythm. His music celebrates retro-modern fusion, combining elements of 80s synthwave, deep electronic grooves, and architectural sound design that elevates every space.</p>
-            <div class="stats">
-              <div class="stat">
-                <span class="stat-number">200+</span>
-                <span class="stat-label">Events</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Years</span>
-              </div>
-              <div class="stat">
-                <span class="stat-number">25K+</span>
-                <span class="stat-label">Happy Guests</span>
+            <div class="about-content">
+              <span class="label">ABOUT</span>
+              <h2>DESIGNING SOUND IS DESIGNING EMOTION</h2>
+              <p>
+                With a background in architecture and a passion for sonic
+                design, Ronn creates soundscapes that fuse structure, emotion,
+                and energy. Each set is crafted like a blueprint — layered,
+                balanced, and built to move both mind and body.
+              </p>
+              <p>
+                Ronn has performed in some of the world's most design-forward
+                venues across Paris, Dubai, Beirut, and Cyprus, delivering
+                performances that merge aesthetic precision with magnetic
+                rhythm. His music celebrates retro-modern fusion, combining
+                elements of 80s synthwave, deep electronic grooves, and
+                architectural sound design that elevates every space.
+              </p>
+              <div class="stats">
+                <div class="stat">
+                  <span class="stat-number">200+</span>
+                  <span class="stat-label">Events</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">5+</span>
+                  <span class="stat-label">Years</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">25K+</span>
+                  <span class="stat-label">Happy Guests</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-      <div class="container">
-        <span class="label center">GALLERY</span>
-        <h2 class="section-title">IN ACTION</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item large gallery-video">
-            <iframe
-              src="https://player.vimeo.com/video/1136859852?badge=0&autopause=0&player_id=0&app_id=58479"
-              title="RONN Performance"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              class="gallery-youtube"
-            ></iframe>
-          </div>
-          <div class="gallery-item">
-            <img src="/event-2.jpg" alt="Studio">
-            <div class="gallery-overlay">
-              <span class="gallery-label">PRODUCTION</span>
-            </div>
-          </div>
-          <div class="gallery-item gallery-video">
-            <iframe
-              src="https://player.vimeo.com/video/1136848158?badge=0&autopause=0&player_id=0&app_id=58479"
-              title="RONN Performance"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              class="gallery-youtube"
-            ></iframe>
-          </div>
-          <div class="gallery-item">
-            <img src="/gallery-2.jpg" alt="Sound Equipment">
-            <div class="gallery-overlay">
-              <span class="gallery-label">STUDIO SETUP</span>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <img src="/gallery-6.jpg" alt="Event Setup">
-            <div class="gallery-overlay">
-              <span class="gallery-label">EVENT SETUP</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="cover-section">
-      <div class="container">
-        <div class="cover-content">
-          <div class="cover-bottom">
-            <div class="video-wrapper">
+      <!-- Gallery Section -->
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <span class="label center">GALLERY</span>
+          <h2 class="section-title">IN ACTION</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item large gallery-video">
               <iframe
-                src="https://player.vimeo.com/video/1136847359?badge=0&autopause=0&player_id=0&app_id=58479"
-                title="DJ RONN Performance"
+                src="https://player.vimeo.com/video/1136859852?badge=0&autopause=0&player_id=0&app_id=58479"
+                title="RONN Performance"
                 frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-                class="cover-video"
+                class="gallery-youtube"
               ></iframe>
             </div>
-            <!-- <div class="cover-bottom-image">
+            <div class="gallery-item">
+              <img src="/event-2.jpg" alt="Studio" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">PRODUCTION</span>
+              </div>
+            </div>
+            <div class="gallery-item gallery-video">
+              <iframe
+                src="https://player.vimeo.com/video/1136848158?badge=0&autopause=0&player_id=0&app_id=58479"
+                title="RONN Performance"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                class="gallery-youtube"
+              ></iframe>
+            </div>
+            <div class="gallery-item">
+              <img src="/gallery-2.jpg" alt="Sound Equipment" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">STUDIO SETUP</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="/gallery-6.jpg" alt="Event Setup" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">EVENT SETUP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Welcome Section -->
+      <section class="cover-section">
+        <div class="container">
+          <div class="cover-content">
+            <div class="cover-bottom">
+              <div class="video-wrapper">
+                <!-- <iframe
+                  src="https://player.vimeo.com/video/1136847359?badge=0&autopause=0&player_id=0&app_id=58479"
+                  title="DJ RONN Performance"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe> -->
+                <iframe
+                  class="cover-video"
+                  src="https://www.youtube.com/embed/W8PkwJe4Ehc?si=hJ8jJytvWPuUyBl-"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <!-- <div class="cover-bottom-image">
               <img src="/dj.jpg" alt="DJ Performance" class="bottom-image">
             </div> -->
-            <div class="cover-bottom-text">
-              <h2>Minimalism a dialogue <br> between space and human emotion <br> by Ronn Architect of Sound</h2>
-              <p>Ronn talks about exploring the philosophy of minimalism as a profound form of design and self-expression, discussing how creating spaces with intentionality can liberate the human spirit and foster mindfulness through simplicity.</p>
+              <div class="cover-bottom-text">
+                <h2>
+                  Minimalism a dialogue <br />
+                  between space and human emotion <br />
+                  by Ronn Architect of Sound
+                </h2>
+                <p>
+                  Ronn talks about exploring the philosophy of minimalism as a
+                  profound form of design and self-expression, discussing how
+                  creating spaces with intentionality can liberate the human
+                  spirit and foster mindfulness through simplicity.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-      <div class="container">
-        <h2 class="section-title">EXPERIENCE</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-number">01</div>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M19.07 4.93C17.38 3.24 15.09 2.25 12.62 2.05L11.99 2V5L12.62 4.95C14.45 5.1 16.13 5.81 17.48 7.17C18.84 8.52 19.55 10.2 19.7 12.03L19.75 12.7H22.75L22.7 12.03C22.5 9.56 21.51 7.27 19.82 5.58L19.07 4.93Z" fill="currentColor"/>
-                <path d="M19.07 19.07C17.38 20.76 15.09 21.75 12.62 21.95L11.99 22V19L12.62 19.05C14.45 18.9 16.13 18.19 17.48 16.83C18.84 15.48 19.55 13.8 19.7 11.97L19.75 11.3H22.75L22.7 11.97C22.5 14.44 21.51 16.73 19.82 18.42L19.07 19.07Z" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Club Events</h3>
-            <p>High-energy sets that keep the dance floor alive all night long with cutting-edge sound design</p>
-          </div>
-          <div class="service-card">
-            <div class="service-number">02</div>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Private Events</h3>
-            <p>Weddings, corporate events, and exclusive parties tailored to your unique vision and atmosphere</p>
-          </div>
-          <div class="service-card">
-            <div class="service-number">03</div>
-            <div class="service-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18V5L21 12L9 19V18Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M3 18V5L15 12L3 19V18Z" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3>Music Production</h3>
-            <p>Custom tracks, remixes, and sound design crafted with precision and artistic excellence</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Thumbnails Section -->
-    <section class="thumbnails-section">
-      <div class="container">
-        <div class="thumbnails-grid">
-          <div class="thumbnail-item">
-            <img src="/thumnail-1.jpg" alt="DJ Performance">
-            <div class="gallery-overlay">
-              <span class="gallery-label">PERFORMANCE</span>
-            </div>
-          </div>
-          <div class="thumbnail-item">
-            <img src="/thumnail-2.jpg" alt="DJ RONN">
-            <div class="gallery-overlay">
-              <span class="gallery-label">RONN</span>
-            </div>
-          </div>
-          <div class="thumbnail-item">
-            <img src="/thumnail-3.jpg" alt="DJ Setup">
-            <div class="gallery-overlay">
-              <span class="gallery-label">LIVE SET</span>
-            </div>
-          </div>
-          <div class="thumbnail-item">
-            <img src="/thumnail-4.jpg" alt="Club Night">
-            <div class="gallery-overlay">
-              <span class="gallery-label">CLUB NIGHT</span>
-            </div>
-          </div>
-          <div class="thumbnail-item">
-            <img src="/thumnail-5.jpg" alt="Production">
-            <div class="gallery-overlay">
-              <span class="gallery-label">PRODUCTION</span>
-            </div>
-          </div>
-          <div class="thumbnail-item">
-            <img src="/thumnail-6.jpg" alt="Event Setup">
-            <div class="gallery-overlay">
-              <span class="gallery-label">EVENT SETUP</span>
-            </div>
-          </div>
-          <div class="thumbnail-item">
-            <img src="/thumnail-7.jpg" alt="Performance">
-            <div class="gallery-overlay">
-              <span class="gallery-label">PERFORMANCE</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Booking Form Section -->
-    <section class="booking" id="booking">
-      <div class="container">
-        <div class="booking-content">
-          <div class="booking-info">
-            <span class="label">CONTACT</span>
-            <h2>BOOK DJ RONN</h2>
-            <p>Ready to elevate your event? Let's create an unforgettable experience together. Fill out the form and I'll get back to you within 24 hours.</p>
-            <div class="contact-details">
-              <div class="detail-item">
-                <div class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8L10.89 13.26C11.23 13.47 11.61 13.59 12 13.59C12.39 13.59 12.77 13.47 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <div>
-                  <span class="detail-label">EMAIL</span>
-                  <a href="mailto:Ronn@ronnarchitectofsound.com" class="detail-value">Ronn@ronnarchitectofsound.com</a>
-                </div>
-              </div>
-              <div class="detail-item">
-                <div class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <div>
-                  <span class="detail-label">PHONE</span>
-                  <a href="tel:+9613746927" class="detail-value">+961 3 746 927</a>
-                </div>
-              </div>
-              <div class="detail-item">
-                <div class="detail-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 22C12 22 20 16 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 16 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-                  </svg>
-                </div>
-                <div>
-                  <span class="detail-label">LOCATION</span>
-                  <span class="detail-value">Available Worldwide</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <form class="booking-form" @submit.prevent="handleSubmit">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName" class="sr-only">First Name</label>
-                <input
-                  id="firstName"
-                  v-model="formData.firstName"
-                  type="text"
-                  placeholder="First Name"
-                  required
+      <!-- Services Section -->
+      <section class="services" id="services">
+        <div class="container">
+          <h2 class="section-title">EXPERIENCE</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-number">01</div>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-              </div>
-              <div class="form-group">
-                <label for="lastName" class="sr-only">Last Name</label>
-                <input
-                  id="lastName"
-                  v-model="formData.lastName"
-                  type="text"
-                  placeholder="Last Name"
-                  required
-                >
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email" class="sr-only">Email Address</label>
-              <input
-                id="email"
-                v-model="formData.email"
-                type="email"
-                placeholder="Email Address"
-                required
-              >
-            </div>
-            <div class="form-group">
-              <label for="phone" class="sr-only">Phone Number</label>
-              <input
-                id="phone"
-                v-model="formData.phone"
-                type="tel"
-                placeholder="Phone Number"
-                required
-              >
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="eventDate" class="sr-only">Event Date</label>
-                <input
-                  id="eventDate"
-                  v-model="formData.eventDate"
-                  type="date"
-                  placeholder="Event Date"
-                  required
-                >
-              </div>
-              <div class="form-group">
-                <label for="eventType" class="sr-only">Event Type</label>
-                <select id="eventType" v-model="formData.eventType" required>
-                  <option value="" disabled selected>Event Type</option>
-                  <option value="wedding">Wedding</option>
-                  <option value="corporate">Corporate Event</option>
-                  <option value="club">Club Event</option>
-                  <option value="festival">Festival</option>
-                  <option value="private">Private Party</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="location" class="sr-only">Event Location</label>
-              <input
-                id="location"
-                v-model="formData.location"
-                type="text"
-                placeholder="Event Location"
-                required
-              >
-            </div>
-            <div class="form-group">
-              <label for="message" class="sr-only">Tell me about your event</label>
-              <textarea
-                id="message"
-                v-model="formData.message"
-                placeholder="Tell me about your event..."
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="submit-btn" :disabled="isSubmitting">
-                {{ isSubmitting ? 'SENDING...' : 'SEND VIA EMAIL' }}
-              </button>
-              <button type="button" class="submit-btn whatsapp-btn" @click="sendViaWhatsApp" :disabled="isSubmitting">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; margin-right: 8px;">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/>
+                  <path
+                    d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M19.07 4.93C17.38 3.24 15.09 2.25 12.62 2.05L11.99 2V5L12.62 4.95C14.45 5.1 16.13 5.81 17.48 7.17C18.84 8.52 19.55 10.2 19.7 12.03L19.75 12.7H22.75L22.7 12.03C22.5 9.56 21.51 7.27 19.82 5.58L19.07 4.93Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M19.07 19.07C17.38 20.76 15.09 21.75 12.62 21.95L11.99 22V19L12.62 19.05C14.45 18.9 16.13 18.19 17.48 16.83C18.84 15.48 19.55 13.8 19.7 11.97L19.75 11.3H22.75L22.7 11.97C22.5 14.44 21.51 16.73 19.82 18.42L19.07 19.07Z"
+                    fill="currentColor"
+                  />
                 </svg>
-                SEND VIA WHATSAPP
-              </button>
+              </div>
+              <h3>Club Events</h3>
+              <p>
+                High-energy sets that keep the dance floor alive all night long
+                with cutting-edge sound design
+              </p>
             </div>
-            <p v-if="submitMessage" class="submit-message" :class="{ error: submitError }">
-              {{ submitMessage }}
-            </p>
-          </form>
+            <div class="service-card">
+              <div class="service-number">02</div>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <h3>Private Events</h3>
+              <p>
+                Weddings, corporate events, and exclusive parties tailored to
+                your unique vision and atmosphere
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-number">03</div>
+              <div class="service-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18V5L21 12L9 19V18Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M3 18V5L15 12L3 19V18Z" fill="currentColor" />
+                </svg>
+              </div>
+              <h3>Music Production</h3>
+              <p>
+                Custom tracks, remixes, and sound design crafted with precision
+                and artistic excellence
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-        <!-- Hero Section -->
-    <!-- <section class="hero">
+      </section>
+
+      <!-- Thumbnails Section -->
+      <section class="thumbnails-section">
+        <div class="container">
+          <div class="thumbnails-grid">
+            <div class="thumbnail-item">
+              <img src="/thumnail-1.jpg" alt="DJ Performance" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">PERFORMANCE</span>
+              </div>
+            </div>
+            <div class="thumbnail-item">
+              <img src="/thumnail-2.jpg" alt="DJ RONN" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">RONN</span>
+              </div>
+            </div>
+            <div class="thumbnail-item">
+              <img src="/thumnail-3.jpg" alt="DJ Setup" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">LIVE SET</span>
+              </div>
+            </div>
+            <div class="thumbnail-item">
+              <img src="/thumnail-4.jpg" alt="Club Night" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">CLUB NIGHT</span>
+              </div>
+            </div>
+            <div class="thumbnail-item">
+              <img src="/thumnail-5.jpg" alt="Production" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">PRODUCTION</span>
+              </div>
+            </div>
+            <div class="thumbnail-item">
+              <img src="/thumnail-6.jpg" alt="Event Setup" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">EVENT SETUP</span>
+              </div>
+            </div>
+            <div class="thumbnail-item">
+              <img src="/thumnail-7.jpg" alt="Performance" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">PERFORMANCE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Booking Form Section -->
+      <section class="booking" id="booking">
+        <div class="container">
+          <div class="booking-content">
+            <div class="booking-info">
+              <span class="label">CONTACT</span>
+              <h2>BOOK DJ RONN</h2>
+              <p>
+                Ready to elevate your event? Let's create an unforgettable
+                experience together. Fill out the form and I'll get back to you
+                within 24 hours.
+              </p>
+              <div class="contact-details">
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 8L10.89 13.26C11.23 13.47 11.61 13.59 12 13.59C12.39 13.59 12.77 13.47 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="detail-label">EMAIL</span>
+                    <a
+                      href="mailto:Ronn@ronnarchitectofsound.com"
+                      class="detail-value"
+                      >Ronn@ronnarchitectofsound.com</a
+                    >
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="detail-label">PHONE</span>
+                    <a href="tel:+9613746927" class="detail-value"
+                      >+961 3 746 927</a
+                    >
+                  </div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-icon">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M12 22C12 22 20 16 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 16 12 22 12 22Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="detail-label">LOCATION</span>
+                    <span class="detail-value">Available Worldwide</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <form class="booking-form" @submit.prevent="handleSubmit">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="sr-only">First Name</label>
+                  <input
+                    id="firstName"
+                    v-model="formData.firstName"
+                    type="text"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="sr-only">Last Name</label>
+                  <input
+                    id="lastName"
+                    v-model="formData.lastName"
+                    type="text"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="sr-only">Email Address</label>
+                <input
+                  id="email"
+                  v-model="formData.email"
+                  type="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone" class="sr-only">Phone Number</label>
+                <input
+                  id="phone"
+                  v-model="formData.phone"
+                  type="tel"
+                  placeholder="Phone Number"
+                  required
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="eventDate" class="sr-only">Event Date</label>
+                  <input
+                    id="eventDate"
+                    v-model="formData.eventDate"
+                    type="date"
+                    placeholder="Event Date"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="eventType" class="sr-only">Event Type</label>
+                  <select id="eventType" v-model="formData.eventType" required>
+                    <option value="" disabled selected>Event Type</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="club">Club Event</option>
+                    <option value="festival">Festival</option>
+                    <option value="private">Private Party</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="location" class="sr-only">Event Location</label>
+                <input
+                  id="location"
+                  v-model="formData.location"
+                  type="text"
+                  placeholder="Event Location"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message" class="sr-only"
+                  >Tell me about your event</label
+                >
+                <textarea
+                  id="message"
+                  v-model="formData.message"
+                  placeholder="Tell me about your event..."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  class="submit-btn"
+                  :disabled="isSubmitting"
+                >
+                  {{ isSubmitting ? "SENDING..." : "SEND VIA EMAIL" }}
+                </button>
+                <button
+                  type="button"
+                  class="submit-btn whatsapp-btn"
+                  @click="sendViaWhatsApp"
+                  :disabled="isSubmitting"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="width: 20px; height: 20px; margin-right: 8px"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  SEND VIA WHATSAPP
+                </button>
+              </div>
+              <p
+                v-if="submitMessage"
+                class="submit-message"
+                :class="{ error: submitError }"
+              >
+                {{ submitMessage }}
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section -->
+      <!-- <section class="hero">
       <div class="hero-background">
         <div class="grid-overlay"></div>
         <div class="light-beam light-beam-1"></div>
@@ -482,38 +700,91 @@
     </section> -->
     </main>
 
-
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="/logo.jpg" alt="DJ RONN" class="footer-logo-image">
+            <img src="/logo.jpg" alt="DJ RONN" class="footer-logo-image" />
             <p>Architect of Sound</p>
           </div>
           <div class="footer-social">
-            <a href="https://www.instagram.com/ronn.architectofsound?igsh=aGN1OWlrbjRlcWQ4" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
-                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-                <circle cx="18" cy="6" r="1" fill="currentColor"/>
+            <a
+              href="https://www.instagram.com/ronn.architectofsound?igsh=aGN1OWlrbjRlcWQ4"
+              class="social-link"
+              aria-label="Instagram"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <circle cx="18" cy="6" r="1" fill="currentColor" />
               </svg>
             </a>
-            <a href="https://on.soundcloud.com/vzayWw24sUARaROvxO" class="social-link" aria-label="SoundCloud">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12L3 14M5 10L5 16M7 8L7 18M9 6L9 20M11 7L11 19M13 9L13 17M15 8L15 18M17 7L17 19M19 9L19 17M21 11L21 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <a
+              href="https://on.soundcloud.com/vzayWw24sUARaROvxO"
+              class="social-link"
+              aria-label="SoundCloud"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3 12L3 14M5 10L5 16M7 8L7 18M9 6L9 20M11 7L11 19M13 9L13 17M15 8L15 18M17 7L17 19M19 9L19 17M21 11L21 15"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
               </svg>
             </a>
-            <a href="https://youtube.com/shorts/YYpswmKpD3g?si=URqmaxMroT0WWoRM" class="social-link" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M10 9L15 12L10 15V9Z" fill="currentColor"/>
+            <a
+              href="https://youtube.com/shorts/YYpswmKpD3g?si=URqmaxMroT0WWoRM"
+              class="social-link"
+              aria-label="YouTube"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="4"
+                  width="20"
+                  height="16"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path d="M10 9L15 12L10 15V9Z" fill="currentColor" />
               </svg>
             </a>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 DJ RONN. All rights reserved. Designed with TellGngr Marketing.</p>
+          <p>
+            &copy; 2025 DJ RONN. All rights reserved. Designed with TellGngr
+            Marketing.
+          </p>
         </div>
       </div>
     </footer>
@@ -521,84 +792,93 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 const formData = ref({
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  eventDate: '',
-  eventType: '',
-  location: '',
-  message: ''
-})
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  eventDate: "",
+  eventType: "",
+  location: "",
+  message: "",
+});
 
-const isSubmitting = ref(false)
-const submitMessage = ref('')
-const submitError = ref(false)
-const mobileMenuOpen = ref(false)
+const isSubmitting = ref(false);
+const submitMessage = ref("");
+const submitError = ref(false);
+const mobileMenuOpen = ref(false);
 
 const toggleMobileMenu = () => {
-  mobileMenuOpen.value = !mobileMenuOpen.value
+  mobileMenuOpen.value = !mobileMenuOpen.value;
   if (mobileMenuOpen.value) {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = "hidden";
   } else {
-    document.body.style.overflow = ''
+    document.body.style.overflow = "";
   }
-}
+};
 
 const sendViaWhatsApp = () => {
   // Validate required fields
-  if (!formData.value.firstName || !formData.value.lastName || !formData.value.phone || !formData.value.message) {
-    submitMessage.value = 'Please fill in all required fields (Name, Phone, Message)'
-    submitError.value = true
-    return
+  if (
+    !formData.value.firstName ||
+    !formData.value.lastName ||
+    !formData.value.phone ||
+    !formData.value.message
+  ) {
+    submitMessage.value =
+      "Please fill in all required fields (Name, Phone, Message)";
+    submitError.value = true;
+    return;
   }
 
   // Format the message
   const whatsappMessage = `*New Booking Request*
 
 *Name:* ${formData.value.firstName} ${formData.value.lastName}
-*Email:* ${formData.value.email || 'Not provided'}
+*Email:* ${formData.value.email || "Not provided"}
 *Phone:* ${formData.value.phone}
-*Event Date:* ${formData.value.eventDate || 'Not specified'}
-*Event Type:* ${formData.value.eventType || 'Not specified'}
-*Location:* ${formData.value.location || 'Not specified'}
+*Event Date:* ${formData.value.eventDate || "Not specified"}
+*Event Type:* ${formData.value.eventType || "Not specified"}
+*Location:* ${formData.value.location || "Not specified"}
 
 *Message:*
-${formData.value.message}`
+${formData.value.message}`;
 
   // Your WhatsApp number (include country code without + or spaces)
-  const whatsappNumber = '9613746927'
+  const whatsappNumber = "9613746927";
 
   // Create WhatsApp URL
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   // Open WhatsApp
-  window.open(whatsappUrl, '_blank')
+  window.open(whatsappUrl, "_blank");
 
   // Show success message
-  submitMessage.value = 'Opening WhatsApp... Please send the message to complete your booking request.'
-  submitError.value = false
-}
+  submitMessage.value =
+    "Opening WhatsApp... Please send the message to complete your booking request.";
+  submitError.value = false;
+};
 
 const closeMobileMenu = () => {
-  mobileMenuOpen.value = false
-  document.body.style.overflow = ''
-}
+  mobileMenuOpen.value = false;
+  document.body.style.overflow = "";
+};
 
 const handleSubmit = async () => {
-  isSubmitting.value = true
-  submitMessage.value = ''
-  submitError.value = false
+  isSubmitting.value = true;
+  submitMessage.value = "";
+  submitError.value = false;
 
   try {
     // Send email using Formspree
-    const response = await fetch('https://formspree.io/f/xanyndok', {
-      method: 'POST',
+    const response = await fetch("https://formspree.io/f/xanyndok", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         name: `${formData.value.firstName} ${formData.value.lastName}`,
@@ -609,39 +889,41 @@ const handleSubmit = async () => {
         location: formData.value.location,
         message: formData.value.message,
         _replyto: formData.value.email,
-        _subject: `New Booking Request from ${formData.value.firstName} ${formData.value.lastName}`
-      })
-    })
+        _subject: `New Booking Request from ${formData.value.firstName} ${formData.value.lastName}`,
+      }),
+    });
 
     if (!response.ok) {
-      throw new Error('Form submission failed')
+      throw new Error("Form submission failed");
     }
 
-    submitMessage.value = 'Booking request sent successfully! I\'ll get back to you within 24 hours.'
-    submitError.value = false
+    submitMessage.value =
+      "Booking request sent successfully! I'll get back to you within 24 hours.";
+    submitError.value = false;
 
     // Reset form
     formData.value = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      eventDate: '',
-      eventType: '',
-      location: '',
-      message: ''
-    }
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      eventDate: "",
+      eventType: "",
+      location: "",
+      message: "",
+    };
   } catch (error) {
-    submitMessage.value = 'Something went wrong. Please try again or email directly at Ronn@ronnarchitectofsound.com'
-    submitError.value = true
+    submitMessage.value =
+      "Something went wrong. Please try again or email directly at Ronn@ronnarchitectofsound.com";
+    submitError.value = true;
   } finally {
-    isSubmitting.value = false
+    isSubmitting.value = false;
   }
-}
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
 
 * {
   margin: 0;
@@ -665,7 +947,8 @@ const handleSubmit = async () => {
 .landing-page {
   background: #000;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica", "Arial", sans-serif;
   overflow-x: hidden;
 }
 
@@ -722,7 +1005,7 @@ const handleSubmit = async () => {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -884,7 +1167,7 @@ const handleSubmit = async () => {
 }
 
 .mobile-menu-link::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -1006,10 +1289,18 @@ const handleSubmit = async () => {
   animation: slideInLinks 0.5s ease forwards;
 }
 
-.mobile-menu-link:nth-child(1) { animation-delay: 0.1s; }
-.mobile-menu-link:nth-child(2) { animation-delay: 0.15s; }
-.mobile-menu-link:nth-child(3) { animation-delay: 0.2s; }
-.mobile-menu-link:nth-child(4) { animation-delay: 0.25s; }
+.mobile-menu-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.mobile-menu-link:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.mobile-menu-link:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.mobile-menu-link:nth-child(4) {
+  animation-delay: 0.25s;
+}
 
 @keyframes slideInLinks {
   from {
@@ -1093,7 +1384,11 @@ const handleSubmit = async () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
   display: flex;
   align-items: flex-end;
   padding: 4rem;
@@ -1117,7 +1412,7 @@ const handleSubmit = async () => {
 }
 
 .architect-text {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: clamp(2rem, 4vw, 4rem);
   color: #fff;
@@ -1140,8 +1435,7 @@ const handleSubmit = async () => {
   overflow: hidden;
   background: #000;
   box-shadow: 0 20px 60px rgba(0, 255, 255, 0.3),
-              0 0 100px rgba(255, 0, 255, 0.2),
-              inset 0 0 0 1px rgba(0, 255, 255, 0.1);
+    0 0 100px rgba(255, 0, 255, 0.2), inset 0 0 0 1px rgba(0, 255, 255, 0.1);
 }
 
 /* .cover-bottom .video-wrapper iframe {
@@ -1209,16 +1503,22 @@ const handleSubmit = async () => {
 .grid-overlay {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: gridMove 20s linear infinite;
 }
 
 @keyframes gridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 50px 50px; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
 }
 
 .light-beam {
@@ -1242,35 +1542,57 @@ const handleSubmit = async () => {
 }
 
 @keyframes beamMove {
-  0%, 100% { transform: translateX(0) scaleY(0.5); opacity: 0.2; }
-  50% { transform: translateX(50px) scaleY(1); opacity: 0.4; }
+  0%,
+  100% {
+    transform: translateX(0) scaleY(0.5);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(50px) scaleY(1);
+    opacity: 0.4;
+  }
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
   top: -400px;
   right: -400px;
   animation: pulse 8s ease-in-out infinite;
 }
 
 .hero::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 0, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 255, 0.1) 0%,
+    transparent 70%
+  );
   bottom: -300px;
   left: -300px;
   animation: pulse 10s ease-in-out infinite;
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.3; }
-  50% { transform: scale(1.2); opacity: 0.6; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
 }
 
 .hero-content {
@@ -1307,7 +1629,7 @@ const handleSubmit = async () => {
 }
 
 .logo::after {
-  content: 'RONN';
+  content: "RONN";
   position: absolute;
   left: 0;
   top: 0;
@@ -1318,8 +1640,13 @@ const handleSubmit = async () => {
 }
 
 @keyframes logoGlow {
-  0%, 100% { filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.4)); }
-  50% { filter: drop-shadow(0 0 60px rgba(255, 0, 255, 0.6)); }
+  0%,
+  100% {
+    filter: drop-shadow(0 0 30px rgba(0, 255, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 60px rgba(255, 0, 255, 0.6));
+  }
 }
 
 .tagline {
@@ -1399,8 +1726,15 @@ const handleSubmit = async () => {
 }
 
 @keyframes scrollLine {
-  0%, 100% { opacity: 0.3; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(15px); }
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(15px);
+  }
 }
 
 /* Container */
@@ -1418,7 +1752,7 @@ const handleSubmit = async () => {
 }
 
 .about::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -1446,7 +1780,7 @@ const handleSubmit = async () => {
 }
 
 .image-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -2px;
   background: linear-gradient(135deg, #00ffff, #ff00ff);
@@ -1591,7 +1925,11 @@ const handleSubmit = async () => {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.4), rgba(255, 0, 255, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.4),
+    rgba(255, 0, 255, 0.4)
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
@@ -1625,13 +1963,18 @@ const handleSubmit = async () => {
 }
 
 .services::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.3),
+    transparent
+  );
 }
 
 .services-grid {
@@ -1653,7 +1996,7 @@ const handleSubmit = async () => {
 }
 
 .service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1723,11 +2066,15 @@ const handleSubmit = async () => {
 }
 
 .booking::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1815,10 +2162,14 @@ const handleSubmit = async () => {
 }
 
 .booking-form::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -1px;
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.1),
+    rgba(255, 0, 255, 0.1)
+  );
   border-radius: 12px;
   z-index: -1;
   opacity: 0;
@@ -1913,7 +2264,7 @@ const handleSubmit = async () => {
 }
 
 .whatsapp-btn {
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, #25d366, #128c7e);
   color: #fff;
 }
 
