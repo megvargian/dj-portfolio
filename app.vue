@@ -757,7 +757,7 @@
               </svg>
             </a>
             <a
-              href="https://youtube.com/shorts/YYpswmKpD3g?si=URqmaxMroT0WWoRM"
+              href="https://www.youtube.com/@DjRonn_ArchitectofSound"
               class="social-link"
               aria-label="YouTube"
             >
