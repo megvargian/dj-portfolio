@@ -1,1 +1,24 @@
+User-agent: *
+Allow: /
 
+# Sitemap location
+Sitemap: https://ronnarchitectofsound.com/sitemap.xml
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /club-dj
+Allow: /private-events
+Allow: /dj-dubai
+Allow: /music
+Allow: /contact
+Allow: /press-kit
+
+# Block admin areas if any
+Disallow: /admin/
+Disallow: /.env
+Disallow: /.git/
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -1,4 +1,5 @@
 <template>
+
   <div class="landing-page">
     <!-- Navigation -->
     <nav class="navbar">
@@ -226,6 +227,117 @@
           </div>
         </div>
       </section>
+
+      <!-- Video Showcase Section -->
+      <section class="video-showcase">
+        <div class="container">
+          <span class="label center">FEATURED</span>
+          <h2 class="section-title">VIDEO SHOWCASE</h2>
+          <div class="video-grid">
+            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Club Night Mix')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Club Night Mix" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>Club Night Mix</h3>
+                  <p>Live Performance</p>
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Wedding Reception')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Wedding Reception" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>Wedding Reception</h3>
+                  <p>Special Event</p>
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Studio Session')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Studio Session" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>Studio Session</h3>
+                  <p>Behind The Scenes</p>
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Corporate Event')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Corporate Event" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>Corporate Event</h3>
+                  <p>Professional Setup</p>
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'DJ Tutorial')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="DJ Tutorial" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>DJ Tutorial</h3>
+                  <p>Educational Content</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Modal Popup -->
+      <div v-if="showVideoModal" class="video-modal" @click="closeVideoModal">
+        <div class="video-modal-content" @click.stop>
+          <button class="video-modal-close" @click="closeVideoModal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div class="video-modal-player">
+            <iframe
+              v-if="currentVideo.id"
+              :src="`https://www.youtube.com/embed/${currentVideo.id}?autoplay=1`"
+              :title="currentVideo.title"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
 
       <!-- Gallery Section -->
       <section class="gallery" id="gallery">
@@ -809,6 +921,41 @@ const isSubmitting = ref(false);
 const submitMessage = ref("");
 const submitError = ref(false);
 const mobileMenuOpen = ref(false);
+const showVideoModal = ref(false);
+const currentVideo = ref({ id: '', title: '' });
+
+// Function to detect mobile device
+const isMobileDevice = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+         window.innerWidth <= 768;
+};
+
+// Function to open video modal or redirect to app
+const openVideoModal = (videoId, title) => {
+  if (isMobileDevice()) {
+    // On mobile, redirect to YouTube app or mobile site
+    const youtubeAppUrl = `youtube://shorts/${videoId}`;
+    const youtubeMobileUrl = `https://youtube.com/shorts/${videoId}`;
+
+    // Try to open YouTube app first, fallback to mobile web
+    window.location.href = youtubeAppUrl;
+    setTimeout(() => {
+      window.open(youtubeMobileUrl, '_blank');
+    }, 500);
+  } else {
+    // On desktop, show popup modal
+    currentVideo.value = { id: videoId, title: title };
+    showVideoModal.value = true;
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+// Function to close video modal
+const closeVideoModal = () => {
+  showVideoModal.value = false;
+  currentVideo.value = { id: '', title: '' };
+  document.body.style.overflow = '';
+};
 
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value;
@@ -1854,6 +2001,257 @@ const handleSubmit = async () => {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-weight: 600;
+}
+
+/* Video Showcase Section */
+.video-showcase {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: #000;
+  border-bottom: 1px solid #333;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-box {
+  position: relative;
+  aspect-ratio: 16/9; /* YouTube standard aspect ratio */
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+}
+
+.video-box:hover {
+  transform: translateY(-8px);
+  border-color: #00ffff;
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-box:hover .video-thumbnail img {
+  transform: scale(1.05);
+}
+
+.play-button-shorts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.video-box:hover .play-button-shorts {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.shorts-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 0, 0, 0.9);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  z-index: 2;
+}
+
+/* Video Modal Styles */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 2rem;
+}
+
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  aspect-ratio: 9/16; /* Shorts aspect ratio */
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10000;
+}
+
+.video-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.video-modal-player {
+  width: 100%;
+  height: 100%;
+}
+
+.video-modal-player iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+}
+
+.video-info h3 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.video-info p {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+}
+
+/* Responsive Design for Video Showcase */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .video-box {
+    margin-bottom: 1rem;
+  }
+
+  .play-button-shorts svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .video-info {
+    padding: 1rem;
+  }
+
+  .video-info h3 {
+    font-size: 1rem;
+  }
+
+  .video-info p {
+    font-size: 0.8rem;
+  }
+
+  .shorts-badge {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  /* Mobile modal adjustments */
+  .video-modal {
+    padding: 1rem;
+  }
+
+  .video-modal-content {
+    width: 95%;
+    max-width: 350px;
+  }
+
+  .video-modal-close {
+    top: -45px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.video-info p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    padding: 0 0.5rem;
+  }
+
+  .video-box {
+    border-radius: 8px;
+  }
+
+  .play-button svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .video-info {
+    padding: 0.8rem;
+  }
+
+  .video-info h3 {
+    font-size: 0.9rem;
+  }
+
+  .video-info p {
+    font-size: 0.75rem;
+  }
 }
 
 /* Gallery Section */
