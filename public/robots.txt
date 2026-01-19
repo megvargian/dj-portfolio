@@ -12,7 +12,6 @@ Allow: /club-dj
 Allow: /private-events
 Allow: /dj-dubai
 Allow: /contact
-Allow: /press-kit
 
 # Block admin areas if any
 Disallow: /admin/
