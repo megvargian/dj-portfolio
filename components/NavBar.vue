@@ -9,8 +9,8 @@
         </div>
         <div class="nav-links">
           <NuxtLink to="/about">ABOUT</NuxtLink>
+          <NuxtLink to="/#gallery">GALLERY</NuxtLink>
           <NuxtLink to="/services">SERVICES</NuxtLink>
-          <NuxtLink to="/music">MUSIC</NuxtLink>
           <NuxtLink to="/contact" class="nav-cta">BOOK NOW</NuxtLink>
         </div>
         <button
@@ -59,13 +59,13 @@
             <span class="link-number">01</span>
             <span class="link-text">ABOUT</span>
           </NuxtLink>
-          <NuxtLink to="/services" @click="closeMobileMenu" class="mobile-menu-link">
+          <NuxtLink to="/#gallery" @click="closeMobileMenu" class="mobile-menu-link">
             <span class="link-number">02</span>
-            <span class="link-text">SERVICES</span>
+            <span class="link-text">GALLERY</span>
           </NuxtLink>
-          <NuxtLink to="/music" @click="closeMobileMenu" class="mobile-menu-link">
+          <NuxtLink to="/services" @click="closeMobileMenu" class="mobile-menu-link">
             <span class="link-number">03</span>
-            <span class="link-text">MUSIC</span>
+            <span class="link-text">SERVICES</span>
           </NuxtLink>
           <NuxtLink to="/contact" @click="closeMobileMenu" class="mobile-menu-link">
             <span class="link-number">04</span>

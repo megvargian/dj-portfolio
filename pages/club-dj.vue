@@ -16,7 +16,6 @@
             </p>
             <div class="hero-buttons">
               <NuxtLink to="/contact" class="btn-primary">Book Club Gig</NuxtLink>
-              <NuxtLink to="/music" class="btn-secondary">Listen to Sets</NuxtLink>
             </div>
           </div>
           <div class="hero-image">

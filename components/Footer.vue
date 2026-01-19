@@ -18,7 +18,6 @@
           <div class="footer-column">
             <h4>Resources</h4>
             <ul>
-              <li><NuxtLink to="/music">Music & Sets</NuxtLink></li>
               <li><NuxtLink to="/press-kit">Press Kit</NuxtLink></li>
               <li><NuxtLink to="/about">About</NuxtLink></li>
             </ul>

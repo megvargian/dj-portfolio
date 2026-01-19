@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <NavBar />
-    
+
     <main>
       <!-- Hero Section -->
       <section class="page-hero">
@@ -29,19 +29,19 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label for="firstName">First Name *</label>
-                    <input 
-                      type="text" 
-                      id="firstName" 
-                      v-model="formData.firstName" 
+                    <input
+                      type="text"
+                      id="firstName"
+                      v-model="formData.firstName"
                       required
                     />
                   </div>
                   <div class="form-group">
                     <label for="lastName">Last Name *</label>
-                    <input 
-                      type="text" 
-                      id="lastName" 
-                      v-model="formData.lastName" 
+                    <input
+                      type="text"
+                      id="lastName"
+                      v-model="formData.lastName"
                       required
                     />
                   </div>
@@ -50,18 +50,18 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input 
-                      type="email" 
-                      id="email" 
+                    <input
+                      type="email"
+                      id="email"
                       v-model="formData.email"
                     />
                   </div>
                   <div class="form-group">
                     <label for="phone">Phone *</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
-                      v-model="formData.phone" 
+                    <input
+                      type="tel"
+                      id="phone"
+                      v-model="formData.phone"
                       required
                     />
                   </div>
@@ -70,9 +70,9 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label for="eventDate">Event Date</label>
-                    <input 
-                      type="date" 
-                      id="eventDate" 
+                    <input
+                      type="date"
+                      id="eventDate"
                       v-model="formData.eventDate"
                     />
                   </div>
@@ -92,36 +92,36 @@
 
                 <div class="form-group">
                   <label for="location">Event Location</label>
-                  <input 
-                    type="text" 
-                    id="location" 
-                    v-model="formData.location" 
+                  <input
+                    type="text"
+                    id="location"
+                    v-model="formData.location"
                     placeholder="City, venue name, or address"
                   />
                 </div>
 
                 <div class="form-group">
                   <label for="message">Event Details *</label>
-                  <textarea 
-                    id="message" 
-                    v-model="formData.message" 
-                    rows="5" 
+                  <textarea
+                    id="message"
+                    v-model="formData.message"
+                    rows="5"
                     placeholder="Tell me about your event - guest count, duration, music preferences, special requests..."
                     required
                   ></textarea>
                 </div>
 
                 <div class="form-actions">
-                  <button 
-                    type="submit" 
-                    class="btn-primary" 
+                  <button
+                    type="submit"
+                    class="btn-primary"
                     :disabled="isSubmitting"
                   >
                     {{ isSubmitting ? 'Sending...' : 'Send Message' }}
                   </button>
-                  <button 
-                    type="button" 
-                    @click="sendViaWhatsApp" 
+                  <button
+                    type="button"
+                    @click="sendViaWhatsApp"
                     class="btn-secondary"
                   >
                     Send via WhatsApp
@@ -137,7 +137,7 @@
             <!-- Contact Info -->
             <div class="contact-info">
               <h2>Get in Touch</h2>
-              
+
               <div class="contact-method">
                 <h3>📧 Email</h3>
                 <a href="mailto:Ronn@ronnarchitectofsound.com">
@@ -424,11 +424,11 @@ const handleSubmit = async () => {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .form-actions {
     flex-direction: column;
   }

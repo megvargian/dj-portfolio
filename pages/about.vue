@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <NavBar />
-    
+
     <main>
       <!-- Hero Section -->
       <section class="page-hero">
@@ -25,24 +25,24 @@
             <div class="about-text">
               <h2>The Architect of Sound</h2>
               <p>
-                DJ RONN combines a unique background in architecture with a passion for electronic music, 
-                creating structured yet emotional soundscapes that resonate with diverse audiences. 
+                DJ RONN combines a unique background in architecture with a passion for electronic music,
+                creating structured yet emotional soundscapes that resonate with diverse audiences.
                 Based between Dubai and Beirut, RONN brings a multicultural approach to DJ entertainment.
               </p>
-              
+
               <h2>Musical Journey</h2>
               <p>
-                With years of experience performing at premium venues across the Middle East, 
-                DJ RONN specializes in reading crowds and adapting music styles to create the perfect atmosphere 
-                for any event. From intimate private gatherings to high-energy club nights, every performance 
+                With years of experience performing at premium venues across the Middle East,
+                DJ RONN specializes in reading crowds and adapting music styles to create the perfect atmosphere
+                for any event. From intimate private gatherings to high-energy club nights, every performance
                 is carefully crafted to match the audience and occasion.
               </p>
 
               <h2>Professional Approach</h2>
               <p>
-                The architectural background brings a unique perspective to DJ performance - 
-                understanding space, acoustics, and how music flows through different environments. 
-                This technical knowledge combined with musical intuition creates performances that 
+                The architectural background brings a unique perspective to DJ performance -
+                understanding space, acoustics, and how music flows through different environments.
+                This technical knowledge combined with musical intuition creates performances that
                 are both professional and emotionally engaging.
               </p>
             </div>

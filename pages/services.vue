@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <NavBar />
-    
+
     <main>
       <!-- Hero Section -->
       <section class="page-hero">
