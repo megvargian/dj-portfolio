@@ -17,9 +17,7 @@ export default defineNuxtConfig({
         '/club-dj',
         '/private-events',
         '/dj-dubai',
-        '/music',
-        '/contact',
-        '/press-kit'
+        '/contact'
       ]
     }
   },
@@ -109,6 +107,10 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap'
   ],
 
+  site: {
+    url: 'https://ronnarchitectofsound.com'
+  },
+
   sitemap: {
     hostname: 'https://ronnarchitectofsound.com',
     gzip: true,
@@ -119,9 +121,7 @@ export default defineNuxtConfig({
       '/club-dj',
       '/private-events',
       '/dj-dubai',
-      '/music',
-      '/contact',
-      '/press-kit'
+      '/contact'
     ]
   }
 })
