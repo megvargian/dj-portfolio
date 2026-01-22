@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="/main-img-min.jpg" alt="DJ RONN performing at a nightclub" />
+            <img style="width: 100%;" src="/main-img-min.jpg" alt="DJ RONN performing at a nightclub" />
           </div>
         </div>
       </section>

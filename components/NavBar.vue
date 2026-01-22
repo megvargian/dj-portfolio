@@ -11,6 +11,9 @@
           <NuxtLink to="/about">ABOUT</NuxtLink>
           <NuxtLink to="/#gallery">GALLERY</NuxtLink>
           <NuxtLink to="/services">SERVICES</NuxtLink>
+          <NuxtLink to="/dj-dubai">DUBAI</NuxtLink>
+          <NuxtLink to="/dj-club">CLUB</NuxtLink>
+          <NuxtLink to="/private-events">PRIVATE EVENTS</NuxtLink>
           <NuxtLink to="/contact" class="nav-cta">BOOK NOW</NuxtLink>
         </div>
         <button
@@ -67,10 +70,22 @@
             <span class="link-number">03</span>
             <span class="link-text">SERVICES</span>
           </NuxtLink>
-          <NuxtLink to="/contact" @click="closeMobileMenu" class="mobile-menu-link">
+          <NuxtLink to="/dj-dubai" @click="closeMobileMenu" class="mobile-menu-link">
             <span class="link-number">04</span>
-            <span class="link-text">BOOK NOW</span>
+            <span class="link-text">DUBAI</span>
           </NuxtLink>
+          <NuxtLink to="/dj-club" @click="closeMobileMenu" class="mobile-menu-link">
+            <span class="link-number">05</span>
+            <span class="link-text">CLUB</span>
+          </NuxtLink>
+          <NuxtLink to="/private-events" @click="closeMobileMenu" class="mobile-menu-link">
+            <span class="link-number">06</span>
+            <span class="link-text">PRIVATE EVENTS</span>
+          </NuxtLink>
+            <NuxtLink to="/contact" @click="closeMobileMenu" class="mobile-menu-link">
+              <span class="link-number">07</span>
+              <span class="link-text">CONTACT</span>
+            </NuxtLink>
         </nav>
         <div class="mobile-menu-footer">
           <div class="mobile-menu-contact">

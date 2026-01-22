@@ -20,7 +20,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="/main-img-min.jpg" alt="DJ RONN performing in Dubai with city skyline background" />
+            <img style="width: 100%;" src="/main-img-min.jpg" alt="DJ RONN performing in Dubai with city skyline background" />
           </div>
         </div>
       </section>
