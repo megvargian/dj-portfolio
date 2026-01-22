@@ -2,7 +2,8 @@
 
   <div class="landing-page">
     <!-- Navigation -->
-    <nav class="navbar">
+    <NavBar />
+    <!-- <nav class="navbar">
       <div class="container">
         <div class="nav-content">
           <div class="nav-logo">
@@ -27,7 +28,7 @@
           </button>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- Mobile Menu -->
     <Transition name="mobile-menu">
