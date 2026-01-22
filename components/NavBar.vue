@@ -12,7 +12,7 @@
           <NuxtLink to="/#gallery">GALLERY</NuxtLink>
           <NuxtLink to="/services">SERVICES</NuxtLink>
           <NuxtLink to="/dj-dubai">DUBAI</NuxtLink>
-          <NuxtLink to="/dj-club">CLUB</NuxtLink>
+          <NuxtLink to="/club-dj">CLUB</NuxtLink>
           <NuxtLink to="/private-events">PRIVATE EVENTS</NuxtLink>
           <NuxtLink to="/contact" class="nav-cta">BOOK NOW</NuxtLink>
         </div>
@@ -74,7 +74,7 @@
             <span class="link-number">04</span>
             <span class="link-text">DUBAI</span>
           </NuxtLink>
-          <NuxtLink to="/dj-club" @click="closeMobileMenu" class="mobile-menu-link">
+          <NuxtLink to="/club-dj" @click="closeMobileMenu" class="mobile-menu-link">
             <span class="link-number">05</span>
             <span class="link-text">CLUB</span>
           </NuxtLink>
