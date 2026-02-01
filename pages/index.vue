@@ -235,9 +235,9 @@
           <span class="label center">FEATURED</span>
           <h2 class="section-title">VIDEO SHOWCASE</h2>
           <div class="video-grid">
-            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Club Night Mix')">
+            <div class="video-box" @click="openVideoModal('WqV38G5zPnU', 'Club Night Mix')">
               <div class="video-thumbnail">
-                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Club Night Mix" />
+                <img :src="`https://img.youtube.com/vi/WqV38G5zPnU/maxresdefault.jpg`" alt="Club Night Mix" />
                 <div class="play-button-shorts">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
@@ -264,54 +264,6 @@
                 <div class="video-info">
                   <h3>Wedding Reception</h3>
                   <p>Special Event</p>
-                </div>
-              </div>
-            </div>
-            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Studio Session')">
-              <div class="video-thumbnail">
-                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Studio Session" />
-                <div class="play-button-shorts">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
-                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="shorts-badge">Shorts</div>
-                <div class="video-info">
-                  <h3>Studio Session</h3>
-                  <p>Behind The Scenes</p>
-                </div>
-              </div>
-            </div>
-            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Corporate Event')">
-              <div class="video-thumbnail">
-                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Corporate Event" />
-                <div class="play-button-shorts">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
-                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="shorts-badge">Shorts</div>
-                <div class="video-info">
-                  <h3>Corporate Event</h3>
-                  <p>Professional Setup</p>
-                </div>
-              </div>
-            </div>
-            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'DJ Tutorial')">
-              <div class="video-thumbnail">
-                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="DJ Tutorial" />
-                <div class="play-button-shorts">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
-                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="shorts-badge">Shorts</div>
-                <div class="video-info">
-                  <h3>DJ Tutorial</h3>
-                  <p>Educational Content</p>
                 </div>
               </div>
             </div>
