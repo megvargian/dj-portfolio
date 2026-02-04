@@ -96,7 +96,7 @@ export default defineNuxtConfig({
         }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/jpeg', href: '/logo.jpg' },
         { rel: 'canonical', href: 'https://ronnarchitectofsound.com' }
       ]
     }
