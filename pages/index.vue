@@ -233,7 +233,7 @@
       <section class="video-showcase">
         <div class="container">
           <span class="label center">FEATURED</span>
-          <h2 class="section-title">VIDEO SHOWCASE</h2>
+          <h2 class="section-title">LET'S TALK</h2>
           <div class="video-grid">
             <div class="video-box" @click="openVideoModal('WqV38G5zPnU', 'Club Night Mix')">
               <div class="video-thumbnail">
@@ -246,8 +246,8 @@
                 </div>
                 <div class="shorts-badge">Shorts</div>
                 <div class="video-info">
-                  <h3>Club Night Mix</h3>
-                  <p>Live Performance</p>
+                  <h3>Wiring live drum intro the set</h3>
+                  <!-- <p></p> -->
                 </div>
               </div>
             </div>
@@ -262,8 +262,8 @@
                 </div>
                 <div class="shorts-badge">Shorts</div>
                 <div class="video-info">
-                  <h3>Wedding Reception</h3>
-                  <p>Special Event</p>
+                  <h3>Architect by day</h3>
+                  <!-- <p>Special Event</p> -->
                 </div>
               </div>
             </div>
