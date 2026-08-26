@@ -1,34 +1,7 @@
 <template>
-
   <div class="landing-page">
     <!-- Navigation -->
     <NavBar />
-    <!-- <nav class="navbar">
-      <div class="container">
-        <div class="nav-content">
-          <div class="nav-logo">
-            <img src="/logo.jpg" alt="DJ RONN" class="nav-logo-image" />
-          </div>
-          <div class="nav-links">
-            <a href="/about">ABOUT</a>
-            <a href="#gallery">GALLERY</a>
-            <a href="/services">SERVICES</a>
-            <a href="#booking" class="nav-cta">BOOK NOW</a>
-          </div>
-          <button
-            class="mobile-menu-btn"
-            @click="toggleMobileMenu"
-            :class="{ active: mobileMenuOpen }"
-            aria-label="Toggle mobile menu"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </nav> -->
 
     <!-- Mobile Menu -->
     <Transition name="mobile-menu">
@@ -309,11 +282,25 @@
                 class="gallery-youtube"
               ></iframe>
             </div>
-            <div class="gallery-item">
-              <img src="/event-2.jpg" alt="Studio" />
-              <div class="gallery-overlay">
-                <span class="gallery-label">PRODUCTION</span>
-              </div>
+            <div class="gallery-item gallery-video">
+              <video
+                ref="galleryVideo"
+                src="/video-1.mov"
+                poster="/video-preview.png"
+                controls
+                muted
+                playsinline
+                preload="none"
+                class="gallery-video-element"
+              ></video>
+
+              <!-- <button
+                class="video-play-button"
+                @click="galleryVideo?.play()"
+                aria-label="Play video"
+              >
+                ▶
+              </button> -->
             </div>
             <div class="gallery-item gallery-video">
               <iframe
@@ -858,7 +845,7 @@
 
 <script setup>
 import { ref } from "vue";
-
+const galleryVideo = ref(null);
 const formData = ref({
   firstName: "",
   lastName: "",
@@ -3019,5 +3006,35 @@ const handleSubmit = async () => {
     align-items: center;
     text-align: center;
   }
+}
+.gallery-video {
+  position: relative;
+}
+
+.gallery-video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.video-play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
 }
 </style>
