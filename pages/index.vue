@@ -208,38 +208,6 @@
           <span class="label center">FEATURED</span>
           <h2 class="section-title">LET'S TALK</h2>
           <div class="video-grid">
-            <div class="video-box" @click="openVideoModal('WqV38G5zPnU', 'Club Night Mix')">
-              <div class="video-thumbnail">
-                <img :src="`https://img.youtube.com/vi/WqV38G5zPnU/maxresdefault.jpg`" alt="Club Night Mix" />
-                <div class="play-button-shorts">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
-                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="shorts-badge">Shorts</div>
-                <div class="video-info">
-                  <h3>Wiring live drum intro the set</h3>
-                  <!-- <p></p> -->
-                </div>
-              </div>
-            </div>
-            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Wedding Reception')">
-              <div class="video-thumbnail">
-                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Wedding Reception" />
-                <div class="play-button-shorts">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
-                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
-                  </svg>
-                </div>
-                <div class="shorts-badge">Shorts</div>
-                <div class="video-info">
-                  <h3>Architect by day</h3>
-                  <!-- <p>Special Event</p> -->
-                </div>
-              </div>
-            </div>
             <div class="video-box" @click="openVideoModal('t7ucS-msMkc', 'the Purpose')">
               <div class="video-thumbnail">
                 <img :src="`https://img.youtube.com/vi/t7ucS-msMkc/maxresdefault.jpg`" alt="the Purpose" />
@@ -300,6 +268,38 @@
                 <div class="shorts-badge">Shorts</div>
                 <div class="video-info">
                   <h3>How do you read a room in the first 10 sec</h3>
+                  <!-- <p>Special Event</p> -->
+                </div>
+              </div>
+            </div>
+             <div class="video-box" @click="openVideoModal('WqV38G5zPnU', 'Club Night Mix')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/WqV38G5zPnU/maxresdefault.jpg`" alt="Club Night Mix" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>Wiring live drum intro the set</h3>
+                  <!-- <p></p> -->
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('J89z6C_ym64', 'Wedding Reception')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/J89z6C_ym64/maxresdefault.jpg`" alt="Wedding Reception" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>Architect by day</h3>
                   <!-- <p>Special Event</p> -->
                 </div>
               </div>

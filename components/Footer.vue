@@ -12,7 +12,7 @@
             <ul>
               <li><NuxtLink to="/club-dj">Club DJ</NuxtLink></li>
               <li><NuxtLink to="/private-events">Private Events</NuxtLink></li>
-              <li><NuxtLink to="/dj-dubai">DJ in Dubai</NuxtLink></li>
+              <!-- <li><NuxtLink to="/dj-dubai">DJ in Dubai</NuxtLink></li> -->
             </ul>
           </div>
           <div class="footer-column">

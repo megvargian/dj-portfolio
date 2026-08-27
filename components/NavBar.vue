@@ -11,7 +11,7 @@
           <NuxtLink to="/about">ABOUT</NuxtLink>
           <NuxtLink to="/#gallery">GALLERY</NuxtLink>
           <NuxtLink to="/services">SERVICES</NuxtLink>
-          <NuxtLink to="/dj-dubai">DUBAI</NuxtLink>
+          <!-- <NuxtLink to="/dj-dubai">DUBAI</NuxtLink> -->
           <NuxtLink to="/club-dj">CLUB</NuxtLink>
           <NuxtLink to="/private-events">PRIVATE EVENTS</NuxtLink>
           <NuxtLink to="/contact" class="nav-cta">BOOK NOW</NuxtLink>
