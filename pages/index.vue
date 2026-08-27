@@ -240,6 +240,70 @@
                 </div>
               </div>
             </div>
+            <div class="video-box" @click="openVideoModal('t7ucS-msMkc', 'the Purpose')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/t7ucS-msMkc/maxresdefault.jpg`" alt="the Purpose" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>the Purpose</h3>
+                  <!-- <p>Special Event</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('Wvwa1EVQhoc', 'the Average')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/Wvwa1EVQhoc/maxresdefault.jpg`" alt="the Average" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>the Average</h3>
+                  <!-- <p>Special Event</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('1AOYV_QDrLM', 'The one that changed everything')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/1AOYV_QDrLM/maxresdefault.jpg`" alt="The one that changed everything" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>The one that changed everything</h3>
+                  <!-- <p>Special Event</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="video-box" @click="openVideoModal('Wvwa1EVQhoc', 'How do you read a room in the first 10 sec')">
+              <div class="video-thumbnail">
+                <img :src="`https://img.youtube.com/vi/Wvwa1EVQhoc/maxresdefault.jpg`" alt="How do you read a room in the first 10 sec" />
+                <div class="play-button-shorts">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(255, 0, 0, 0.9)" />
+                    <path d="M24 18L42 30L24 42V18Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="shorts-badge">Shorts</div>
+                <div class="video-info">
+                  <h3>How do you read a room in the first 10 sec</h3>
+                  <!-- <p>Special Event</p> -->
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
