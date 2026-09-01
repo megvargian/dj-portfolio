@@ -98,6 +98,77 @@ body {
   color: #00ffff;
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.nav-dropdown .caret {
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .caret {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  background: rgba(10, 10, 10, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  margin-top: 0.75rem;
+}
+
+.dropdown-item {
+  padding: 0.9rem 1.5rem;
+  color: #b3b3b3 !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.dropdown-item::after {
+  display: none;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  color: #00ffff !important;
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-5px);
+}
+
 .nav-cta {
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, #00ffff, #ff00ff);
@@ -771,6 +842,61 @@ main {
 .mobile-menu-link:hover {
   background: rgba(0, 255, 255, 0.05);
   transform: translateX(10px);
+}
+
+.mobile-menu-club-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mobile-menu-club-toggle .caret {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-club-toggle .caret.open {
+  transform: rotate(180deg);
+}
+
+.mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4.5rem;
+  overflow: hidden;
+}
+
+.mobile-submenu-link {
+  padding: 0.9rem 1rem;
+  color: #999;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-submenu-link:hover {
+  color: #00ffff;
+  transform: translateX(10px);
+}
+
+.mobile-submenu-enter-active,
+.mobile-submenu-leave-active {
+  transition: all 0.3s ease;
+}
+
+.mobile-submenu-enter-from,
+.mobile-submenu-leave-to {
+  opacity: 0;
+  max-height: 0;
+}
+
+.mobile-submenu-enter-to,
+.mobile-submenu-leave-from {
+  opacity: 1;
+  max-height: 400px;
 }
 
 .link-number {

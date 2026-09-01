@@ -4,25 +4,60 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="page-hero">
+      <section class="page-hero centered-hero">
         <div class="container">
-          <div class="hero-content">
-            <span class="breadcrumb">
-              <NuxtLink to="/">Home</NuxtLink> / Club DJ
-            </span>
-            <h1 class="page-title">Professional Club DJ Services</h1>
-            <p class="page-subtitle">
-              High-energy sets and professional mixing for nightclubs, bars, and party venues
-            </p>
-            <div class="hero-buttons">
-              <NuxtLink to="/contact" class="btn-primary">Book Club Gig</NuxtLink>
+          <span class="breadcrumb">
+            <NuxtLink to="/">Home</NuxtLink> / Club DJ
+          </span>
+          <h1 class="page-title">Club DJ Around The World</h1>
+          <p class="page-subtitle">
+            High-energy club sets across Dubai, Yerevan, Beirut, Paris, Milano & Cyprus
+          </p>
+        </div>
+      </section>
+
+      <!-- City Albums -->
+      <section class="city-albums-section">
+        <div class="container">
+          <div class="city-grid">
+            <div
+              v-for="city in cities"
+              :key="city.slug"
+              :id="city.slug"
+              class="city-box"
+              @click="openAlbum(city)"
+            >
+              <img :src="city.cover" :alt="`DJ RONN in ${city.name}`" class="city-cover" />
+              <div class="city-overlay">
+                <h3 class="city-name">{{ city.name }}</h3>
+                <span class="city-view">View Album</span>
+              </div>
             </div>
-          </div>
-          <div class="hero-image">
-            <img style="width: 100%;" src="/main-img-min.jpg" alt="DJ RONN performing at a nightclub" />
           </div>
         </div>
       </section>
+
+      <!-- Album Swiper Modal -->
+      <Transition name="fade">
+        <div v-if="activeCity" class="album-modal" @click.self="closeAlbum">
+          <button class="album-close" @click="closeAlbum" aria-label="Close album">×</button>
+          <div class="album-swiper" @touchstart="onTouchStart" @touchend="onTouchEnd">
+            <button class="swiper-arrow left" @click="prevImage" aria-label="Previous image">‹</button>
+            <img :src="activeCity.images[currentIndex]" :alt="`${activeCity.name} photo ${currentIndex + 1}`" class="swiper-image" />
+            <button class="swiper-arrow right" @click="nextImage" aria-label="Next image">›</button>
+          </div>
+          <div class="swiper-dots">
+            <span
+              v-for="(img, i) in activeCity.images"
+              :key="i"
+              class="swiper-dot"
+              :class="{ active: i === currentIndex }"
+              @click="currentIndex = i"
+            ></span>
+          </div>
+          <div class="swiper-title">{{ activeCity.name }} — {{ currentIndex + 1 }} / {{ activeCity.images.length }}</div>
+        </div>
+      </Transition>
 
       <!-- Club DJ Services -->
       <section class="content-section">
@@ -171,6 +206,91 @@
 </template>
 
 <script setup>
+const cities = [
+  {
+    name: "Dubai",
+    slug: "dubai",
+    cover: "/main-img-min.jpg",
+    images: ["/main-img-min.jpg", "/gallery-2.jpg", "/event-1.jpg", "/thumnail-1.jpg"],
+  },
+  {
+    name: "Yerevan",
+    slug: "yerevan",
+    cover: "/gallery-5.jpg",
+    images: ["/gallery-5.jpg", "/thumnail-2.jpg", "/ronn-1.jpg", "/event-2.jpg"],
+  },
+  {
+    name: "Beirut",
+    slug: "beirut",
+    cover: "/gallery-6.jpg",
+    images: ["/gallery-6.jpg", "/thumnail-3.jpg", "/dj.jpg", "/thumnail-4.jpg"],
+  },
+  {
+    name: "Paris",
+    slug: "paris",
+    cover: "/thumnail-5.jpg",
+    images: ["/thumnail-5.jpg", "/IMG-20251106-WA0050.jpg", "/ronn.jpg", "/thumnail-6.jpg"],
+  },
+  {
+    name: "Milano",
+    slug: "milano",
+    cover: "/thumnail-7.jpg",
+    images: ["/thumnail-7.jpg", "/IMG-20251106-WA0051.jpg", "/main-img-min-1.jpg", "/gallery-2.jpg"],
+  },
+  {
+    name: "Cyprus",
+    slug: "cyprus",
+    cover: "/IMG-20251106-WA0052.jpg",
+    images: ["/IMG-20251106-WA0052.jpg", "/event-1.jpg", "/gallery-5.jpg", "/thumnail-1.jpg"],
+  },
+];
+
+const activeCity = ref(null);
+const currentIndex = ref(0);
+let touchStartX = 0;
+
+const openAlbum = (city) => {
+  activeCity.value = city;
+  currentIndex.value = 0;
+  document.body.style.overflow = "hidden";
+};
+
+const closeAlbum = () => {
+  activeCity.value = null;
+  document.body.style.overflow = "";
+};
+
+const nextImage = () => {
+  if (!activeCity.value) return;
+  currentIndex.value = (currentIndex.value + 1) % activeCity.value.images.length;
+};
+
+const prevImage = () => {
+  if (!activeCity.value) return;
+  currentIndex.value =
+    (currentIndex.value - 1 + activeCity.value.images.length) % activeCity.value.images.length;
+};
+
+const onTouchStart = (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+};
+
+const onTouchEnd = (e) => {
+  const delta = e.changedTouches[0].screenX - touchStartX;
+  if (delta > 50) prevImage();
+  else if (delta < -50) nextImage();
+};
+
+const onKeydown = (e) => {
+  if (!activeCity.value) return;
+  if (e.key === "Escape") closeAlbum();
+  else if (e.key === "ArrowRight") nextImage();
+  else if (e.key === "ArrowLeft") prevImage();
+};
+
+onMounted(() => window.addEventListener("keydown", onKeydown));
+onBeforeUnmount(() => window.removeEventListener("keydown", onKeydown));
+
 useSeoMeta({
   title: 'Club DJ Services - Professional Nightclub DJ | DJ RONN',
   ogTitle: 'Club DJ Services - Professional Nightclub DJ | DJ RONN',
@@ -190,6 +310,17 @@ useSeoMeta({
 
 .hero-content {
   max-width: 600px;
+}
+
+.centered-hero .container {
+  max-width: 800px;
+  text-align: center;
+}
+
+.centered-hero .page-title,
+.centered-hero .page-subtitle {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .breadcrumb {
@@ -222,6 +353,189 @@ useSeoMeta({
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+
+/* City Albums */
+.city-albums-section {
+  padding: 2rem 0 4rem;
+}
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.city-box {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.city-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.city-box:hover .city-cover {
+  transform: scale(1.08);
+}
+
+.city-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.city-name {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+
+.city-view {
+  font-size: 0.85rem;
+  color: #00ffff;
+  letter-spacing: 0.1rem;
+  border: 1px solid #00ffff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.city-box:hover .city-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .city-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Album Swiper Modal */
+.album-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.album-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.album-close:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.album-swiper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-image {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 12px;
+  object-fit: contain;
+  user-select: none;
+}
+
+.swiper-arrow {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0 1rem;
+}
+
+.swiper-arrow:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.swiper-dots {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.swiper-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.swiper-dot.active {
+  background: #00ffff;
+}
+
+.swiper-title {
+  margin-top: 1rem;
+  color: #999;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .swiper-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+  }
 }
 
 .services-grid {
