@@ -366,12 +366,12 @@
                 ▶
               </button> -->
             </div>
-            <div class="gallery-item">
+            <!-- <div class="gallery-item">
               <img src="/event-1.jpg" alt="Production" />
               <div class="gallery-overlay">
                 <span class="gallery-label">Production</span>
               </div>
-            </div>
+            </div> -->
             <div class="gallery-item gallery-video">
               <video
                 ref="galleryVideo"

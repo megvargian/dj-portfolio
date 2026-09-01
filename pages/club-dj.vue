@@ -210,14 +210,14 @@ const cities = [
   {
     name: "Dubai",
     slug: "dubai",
-    cover: "/main-img-min.jpg",
-    images: ["/main-img-min.jpg", "/gallery-2.jpg", "/event-1.jpg", "/thumnail-1.jpg"],
+    cover: "/event-1.jpg",
+    images: ["/event-1.jpg", "/gallery-2.jpg", "/event-1.jpg", "/thumnail-1.jpg"],
   },
   {
     name: "Yerevan",
     slug: "yerevan",
-    cover: "/gallery-5.jpg",
-    images: ["/gallery-5.jpg", "/thumnail-2.jpg", "/ronn-1.jpg", "/event-2.jpg"],
+    cover: "/yerevan-1.png",
+    images: ["/yerevan-1.png", "/thumnail-2.jpg", "/ronn-1.jpg", "/event-2.jpg"],
   },
   {
     name: "Beirut",
@@ -234,14 +234,14 @@ const cities = [
   {
     name: "Milano",
     slug: "milano",
-    cover: "/thumnail-7.jpg",
-    images: ["/thumnail-7.jpg", "/IMG-20251106-WA0051.jpg", "/main-img-min-1.jpg", "/gallery-2.jpg"],
+    cover: "/gallery-5.jpg",
+    images: ["/gallery-5.jpg", "/IMG-20251106-WA0051.jpg", "/main-img-min-1.jpg", "/gallery-2.jpg"],
   },
   {
     name: "Cyprus",
     slug: "cyprus",
-    cover: "/IMG-20251106-WA0052.jpg",
-    images: ["/IMG-20251106-WA0052.jpg", "/event-1.jpg", "/gallery-5.jpg", "/thumnail-1.jpg"],
+    cover: "/cyprus-1.png",
+    images: ["/cyprus-1.png", "/event-1.jpg", "/gallery-5.jpg", "/thumnail-1.jpg"],
   },
 ];
 
