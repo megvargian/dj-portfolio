@@ -349,6 +349,32 @@
             <div class="gallery-item gallery-video">
               <video
                 ref="galleryVideo"
+                src="/IMG_4990_min.mov"
+                poster="/IMG_4990_min.png"
+                controls
+                muted
+                playsinline
+                preload="none"
+                class="gallery-video-element"
+              ></video>
+
+              <!-- <button
+                class="video-play-button"
+                @click="galleryVideo?.play()"
+                aria-label="Play video"
+              >
+                ▶
+              </button> -->
+            </div>
+            <div class="gallery-item">
+              <img src="/event-1.jpg" alt="Production" />
+              <div class="gallery-overlay">
+                <span class="gallery-label">Production</span>
+              </div>
+            </div>
+            <div class="gallery-item gallery-video">
+              <video
+                ref="galleryVideo"
                 src="/video-1.mov"
                 poster="/video-preview.png"
                 controls
