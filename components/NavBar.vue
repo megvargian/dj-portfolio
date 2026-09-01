@@ -16,7 +16,7 @@
             @mouseenter="clubDropdownOpen = true"
             @mouseleave="clubDropdownOpen = false"
           >
-            <NuxtLink to="/events" class="nav-dropdown-trigger">
+            <NuxtLink to="/club-dj" class="nav-dropdown-trigger">
               CLUB <span class="caret">▾</span>
             </NuxtLink>
             <Transition name="dropdown">
@@ -24,7 +24,7 @@
                 <NuxtLink
                   v-for="city in clubCities"
                   :key="city.slug"
-                  :to="`/events#${city.slug}`"
+                  :to="`/club-dj#${city.slug}`"
                   class="dropdown-item"
                 >
                   {{ city.name }}
@@ -104,7 +104,7 @@
                 <NuxtLink
                   v-for="city in clubCities"
                   :key="city.slug"
-                  :to="`/events#${city.slug}`"
+                  :to="`/club-dj#${city.slug}`"
                   @click="closeMobileMenu"
                   class="mobile-submenu-link"
                 >
