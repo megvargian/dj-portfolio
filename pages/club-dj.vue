@@ -234,8 +234,8 @@ const cities = [
   {
     name: "Milano",
     slug: "milano",
-    cover: "/gallery-5.jpg",
-    images: ["/gallery-5.jpg", "/IMG-20251106-WA0051.jpg", "/main-img-min-1.jpg", "/gallery-2.jpg"],
+    cover: "/milano-2.png",
+    images: ["/milano-2.png", "/gallery-5.jpg", "/main-img-min-1.jpg", "/gallery-2.jpg"],
   },
   {
     name: "Cyprus",
